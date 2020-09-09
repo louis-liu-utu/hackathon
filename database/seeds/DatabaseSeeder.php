@@ -24,5 +24,15 @@ class DatabaseSeeder extends Seeder
                 'password' => \Illuminate\Support\Facades\Hash::make('Ll#23456')
             ]
         );
+
+        \App\User::firstOrCreate(
+            [
+                'email' => 'admin@utu.com',
+            ],
+            [
+                'name' => 'utu admin',
+                'password' => \Illuminate\Support\Facades\Hash::make('admin123456')
+            ]
+        );
     }
 }
