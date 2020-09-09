@@ -6,6 +6,13 @@
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/contacts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/contacts/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/customers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/customers/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +183,7 @@
       <workItem from="1599351324200" duration="35694000" />
       <workItem from="1599482752974" duration="3840000" />
       <workItem from="1599525242426" duration="28456000" />
-      <workItem from="1599609665130" duration="14562000" />
+      <workItem from="1599609665130" duration="17848000" />
     </task>
     <servers />
   </component>
@@ -209,11 +216,12 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="293" y="219" key="EditFileWatcherDialog/0.23.1440.826@0.23.1440.826" timestamp="1599178186552" />
-    <state x="378" y="191" width="683" height="488" key="find.popup" timestamp="1599565124558">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state x="378" y="191" width="683" height="489" key="find.popup" timestamp="1599640086336">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="378" y="191" width="683" height="486" key="find.popup/0.23.1440.826@0.23.1440.826" timestamp="1599029683719" />
     <state x="378" y="191" width="683" height="487" key="find.popup/0.23.1440.827@0.23.1440.827" timestamp="1599544078539" />
     <state x="378" y="191" width="683" height="488" key="find.popup/0.23.1440.828@0.23.1440.828" timestamp="1599565124558" />
+    <state x="378" y="191" width="683" height="489" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1599640086336" />
   </component>
 </project>
