@@ -1,0 +1,886 @@
+@import "reset"
+@import "~bootstrap-4-grid"
+@import 'variables'
+@import "mixin"
+@import "layout"
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap')
+
+.circle
+    width: 61px
+    height: 61px
+    border: none
+    border-radius: 50%
+    flex: 0 0 61px
+    @media (max-width: 1920px)
+        width: 45px
+        height: 45px
+        flex: 0 0 45px
+    @media (max-width: 1200px)
+        width: 30px
+        height: 30px
+        flex: 0 0 30px
+    @media (max-width: 576px)
+        width: 24px
+        height: 24px
+        flex: 0 0 24px
+    &.circle-red
+        background-color: $circle-red
+    &.circle-grey
+        background-color: $circle-grey
+    &.circle-yellow
+        background-color: $circle-yellow
+    &.circle-dark-blue
+        background-color: $circle-dark-blue
+    &.circle-light-blue
+        background-color: $circle-light-blue
+
+.header
+    position: absolute
+    width: 100%
+    z-index: 1
+.home1 .container
+    @media (min-width: 577px) and (max-width: 769px)
+        padding: 0
+        max-width: 100%
+    @media (max-width: 576px)
+        padding: 0
+.home1-bg
+    position: relative
+    padding-top: 56.3%
+    background: url("/images/home-1.png")
+    background-size: cover
+    background-repeat: no-repeat
+    @media (max-width: 992px)
+        padding-top: 65%
+    @media (max-width: 769px)
+        padding-top: 75%
+    @media (max-width: 576px)
+        padding-top: 150%
+        background-position: center
+
+    .home1-txt
+        position: absolute
+        width: 100%
+        top: 10%
+        @media (max-width: 576px)
+            top: 20%
+        .home1-txt-title
+            font-size: 161px
+            font-weight: 600
+            font-stretch: normal
+            font-style: normal
+            line-height: 1.19
+            letter-spacing: -3.22px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            @media (max-width: 1920px)
+                font-size: 110px
+            @media (max-width: 1200px)
+                font-size: 75px
+            @media (max-width: 769px)
+                font-size: 50px
+            @media (max-width: 576px)
+                font-size: 40px
+            .home1-txt-title1
+                margin-left: 1%
+                margin-top: 10px
+                @media (max-width: 576px)
+                    margin-left: 10%
+            .home1-txt-title2
+                margin-right: 5%
+                @media (max-width: 576px)
+                    margin-right: 10%
+            .home1-txt-title-img
+                width: 350px
+                @media (max-width: 1920px)
+                    width: 220px
+                @media (max-width: 1200px)
+                    width: 180px
+                @media (max-width: 769px)
+                    width: 150px
+                @media (max-width: 576px)
+                    position: absolute
+                    width: 140px
+                    position: absolute
+                    left: 50%
+                    margin-left: -70px
+                    top: 130%
+                img
+                    width: 100%
+        .home1-txt-sm
+            font-size: 46px
+            font-weight: 300
+            font-stretch: normal
+            font-style: normal
+            line-height: 1.2
+            letter-spacing: -0.92px
+            text-align: right
+            @media (max-width: 1920px)
+                font-size: 34px
+            @media (max-width: 1200px)
+                font-size: 30px
+            @media (max-width: 769px)
+                font-size: 24px
+            @media (max-width: 576px)
+                font-size: 18px
+            .icon-player
+                display: inline-block
+                background: url("/images/player-icon.svg")
+                width: 30px
+                height: 30px
+                background-size: 30px 30px
+                background-repeat: no-repeat
+                @media (max-width: 1920px)
+                    width: 24px
+                    height: 24px
+                    background-size: 24px 24px
+                @media (max-width: 1200px)
+                    width: 20px
+                    height: 20px
+                    background-size: 20px 20px
+                @media (max-width: 769px)
+                    width: 18px
+                    height: 18px
+                    background-size: 18px 18px
+                @media (max-width: 576px)
+                    width: 15px
+                    height: 15px
+                    background-size: 15px 15px
+
+.home2
+    background-color: $background-grey
+    text-align: center
+    padding: 120px 0
+    @media (max-width: 1920px)
+        padding: 80px 0
+    @media (max-width: 1200px)
+        padding: 60px 0
+    @media (max-width: 576px)
+        padding: 40px 0
+    .home2-title
+        font-size: 138px
+        font-weight: bold
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.09
+        letter-spacing: 1.38px
+        margin-bottom: 150px
+        @media (max-width: 1920px)
+            font-size: 85px
+            margin-bottom: 100px
+        @media (max-width: 1200px)
+            font-size: 70px
+        @media (max-width: 769px)
+            margin-bottom: 70px
+            font-size: 50px
+        @media (max-width: 576px)
+            margin-bottom: 30px
+            font-size: 24px
+    .home2-txt
+        font-size: 42px
+        font-weight: 500
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.12
+        letter-spacing: 0.42px
+        max-width: 1200px
+        margin: 50px auto
+        @media (max-width: 1920px)
+            font-size: 32px
+            max-width: 900px
+            margin: 40px auto
+        @media (max-width: 1200px)
+            font-size: 24px
+            max-width: 700px
+            margin: 30px auto
+        @media (max-width: 769px)
+            font-size: 20px
+            max-width: 500px
+            margin: 25px auto
+        @media (max-width: 576px)
+            font-size: 16px
+            margin: 20px auto
+
+.home3
+    .container
+        padding: 0
+        .home3-list
+            text-align: left
+            position: relative
+            padding: 200px 0
+            @media (max-width: 1920px)
+                padding: 100px 0
+            @media (max-width: 1200px)
+                padding: 80px 0
+            @media (max-width: 993px)
+                padding: 70px 0
+            @media (max-width: 769px)
+                padding: 60px 0
+            @media (max-width: 576px)
+                text-align: center
+                overflow: hidden
+                padding: 40px 0
+            .home3-title
+                font-size: 109px
+                font-weight: bold
+                font-stretch: normal
+                font-style: normal
+                line-height: 1.19
+                letter-spacing: 1.09px
+                @media (max-width: 1920px)
+                    font-size: 70px
+                @media (max-width: 1200px)
+                    font-size: 60px
+                @media (max-width: 993px)
+                    font-size: 45px
+                @media (max-width: 769px)
+                    font-size: 35px
+                @media (max-width: 576px)
+                    font-size: 24px
+                    display: inline-block
+            .home3-txt
+                margin-top: 90px
+                @media (max-width: 1920px)
+                    margin-top: 70px
+                @media (max-width: 1200px)
+                    margin-top: 60px
+                @media (max-width: 993px)
+                    margin-top: 50px
+                @media (max-width: 769px)
+                    margin-top: 40px
+                @media (max-width: 576px)
+                    margin-top: 20px
+                ul li
+                    font-size: 42px
+                    font-weight: 500
+                    font-stretch: normal
+                    font-style: normal
+                    line-height: 1.19
+                    letter-spacing: 0.42px
+                    @media (max-width: 1920px)
+                        font-size: 30px
+                    @media (max-width: 1200px)
+                        font-size: 26px
+                    @media (max-width: 993px)
+                        font-size: 20px
+                    @media (max-width: 769px)
+                        font-size: 16px
+                    @media (max-width: 576px)
+                        font-size: 16px
+            .home3-img
+                position: absolute
+                right: 0
+                bottom: 0
+                top: 0
+                height: 100%
+                @media (max-width: 576px)
+                    position: relative
+                    width: 260px
+                    margin: auto
+                img
+                    width: auto
+                    height: 100%
+                    @media (max-width: 576px)
+                        width: 100%
+                        height: auto
+
+.home4
+    padding: 200px 0
+    @media (max-width: 1920px)
+        padding: 100px 0
+    @media (max-width: 1200px)
+        padding: 80px 0
+    @media (max-width: 769px)
+        padding: 60px 0
+    @media (max-width: 576px)
+        padding: 40px 0
+    .container
+        padding: 0
+        @media (max-width: 576px)
+            padding: 0 15px
+    .home4-title
+        font-size: 149px
+        font-weight: bold
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.19
+        letter-spacing: 1.49px
+        text-align: center
+        max-width: 1300px
+        @media (max-width: 1920px)
+            font-size: 90px
+        @media (max-width: 1200px)
+            font-size: 75px
+        @media (max-width: 769px)
+            font-size: 55px
+        @media (max-width: 576px)
+            font-size: 30px
+    .home4-list
+        .col-sm-12
+            margin: 60px 0
+
+            .home4-item-list
+                justify-content: flex-start
+                max-width: 700px
+                .home4-item-txt
+                    max-width: 350px
+        .home4-item
+            display: flex
+            @media (max-width: 576px)
+                margin: 20px 0 0
+            .home4-item-reverse
+                flex-direction: row-reverse
+                @media (max-width: 576px)
+                    flex-direction: row
+                    margin-bottom: 20px
+                .circle
+                    margin-right: 0
+                    margin-left: 40px
+                    @media (max-width: 576px)
+                        margin-left: 0
+                        margin-right: 5px
+        .home4-item-list-column
+            flex-direction: column
+            .home4-item-list-bottom
+                margin-bottom: 300px
+                @media (max-width: 1920px)
+                    margin-bottom: 200px
+                @media (max-width: 1200px)
+                    margin-bottom: 150px
+                @media (max-width: 769px)
+                    margin-bottom: 100px
+                @media (max-width: 576px)
+                    margin-bottom: 20px
+        .home4-item-list
+            display: flex
+            max-width: 480px
+            margin: auto
+            align-items: center
+            @media (max-width: 576px)
+                margin: 0
+            .circle
+                margin-right: 40px
+                @media (max-width: 1920px)
+                    margin-right: 25px
+                @media (max-width: 1200px)
+                    margin-right: 20px
+                @media (max-width: 769px)
+                    margin-right: 15px
+                @media (max-width: 576px)
+                    margin-right: 5px
+            .home4-item-txt
+                font-size: 33px
+                font-weight: 600
+                font-stretch: normal
+                font-style: italic
+                line-height: 1.52
+                letter-spacing: 0.33px
+                text-align: center
+                @media (max-width: 1920px)
+                    font-size: 24px
+                @media (max-width: 1200px)
+                    font-size: 22px
+                @media (max-width: 769px)
+                    font-size: 18px
+                @media (max-width: 576px)
+                    font-size: 16px
+                @media (max-width: 400px)
+                    font-size: 12px
+        .home4-item-img
+            flex-direction: column
+            @media (max-width: 576px)
+                order: 1
+                max-width: 300px
+                margin: auto
+            img
+                width: 100%
+.home5
+    .home5-bg-black
+        background-color: $home-5-bg
+        padding: 280px 0 60px
+        @media (max-width: 1920px)
+            padding: 140px 0 30px
+        @media (max-width: 1200px)
+            padding: 80px 0 20px
+        @media (max-width: 769px)
+            padding: 60px 0 20px
+        @media (max-width: 576px)
+            padding: 40px 0 0
+    .container
+        padding: 0
+        .home5-list
+            text-align: right
+            position: relative
+            color: $home-5-color
+            @media (max-width: 1920px)
+                padding: 100px 0
+            @media (max-width: 1200px)
+                padding: 80px 0
+            @media (max-width: 769px)
+                padding: 60px 0
+            @media (max-width: 576px)
+                text-align: center
+                overflow: hidden
+                padding: 40px 0 0px
+                margin-bottom: -80px
+            .home5-title
+                font-size: 149px
+                font-weight: bold
+                font-stretch: normal
+                font-style: normal
+                line-height: 1.21
+                letter-spacing: 1.49px
+                @media (max-width: 1920px)
+                    font-size: 90px
+                @media (max-width: 1200px)
+                    font-size: 70px
+                @media (max-width: 769px)
+                    font-size: 50px
+                @media (max-width: 576px)
+                    font-size: 30px
+                    display: inline-block
+            .home5-txt
+                margin-top: 100px
+                @media (max-width: 1920px)
+                    margin-top: 80px
+                @media (max-width: 1200px)
+                    margin-top: 60px
+                @media (max-width: 769px)
+                    margin-top: 40px
+                @media (max-width: 576px)
+                    margin-top: 25px
+                ul li
+                    font-size: 42px
+                    font-weight: 500
+                    font-stretch: normal
+                    font-style: normal
+                    line-height: 1.67
+                    letter-spacing: 0.42px
+                    @media (max-width: 1920px)
+                        font-size: 24px
+                    @media (max-width: 1200px)
+                        font-size: 20px
+                    @media (max-width: 769px)
+                        font-size: 16px
+                    @media (max-width: 576px)
+                        font-size: 16px
+                .icons-list
+                    display: flex
+                    justify-content: flex-end
+                    align-content: center
+                    margin-top: 40px
+                    @media (max-width: 1920px)
+                        margin-top: 30px
+                    @media (max-width: 1200px)
+                        margin-top: 25px
+                    @media (max-width: 769px)
+                        margin-top: 20px
+                    @media (max-width: 576px)
+                        margin-top: 15px
+                        justify-content: space-around
+                    .iconfont
+                        margin-left: 130px
+                        font-size: 42px
+                        @media (max-width: 1920px)
+                            margin-left: 80px
+                            font-size: 24px
+                        @media (max-width: 1200px)
+                            margin-left: 60px
+                            font-size: 20px
+                        @media (max-width: 769px)
+                            margin-left: 50px
+                            font-size: 16px
+                        @media (max-width: 576px)
+                            margin-left: 0
+            .home5-img
+                position: absolute
+                left: 10%
+                bottom: -38%
+                height: 100%
+                @media (max-width: 1920px)
+                    bottom: -30%
+                @media (max-width: 992px)
+                    left: 0
+                    bottom: -25%
+                    height: 85%
+                @media (max-width: 769px)
+                    height: 75%
+                @media (max-width: 576px)
+                    position: relative
+                    max-width: 300px
+                    margin: 20px auto 0
+                    left: 0
+                    height: 100%
+                img
+                    width: auto
+                    height: 100%
+                    @media (max-width: 576px)
+                        width: 100%
+                        height: auto
+    .home5-bg-grey
+        background-color: $background-grey
+        padding-top: 15.1%
+        z-index: -1
+        @media (max-width: 1920px)
+            padding-top: 20%
+        @media (max-width: 576px)
+            padding-top: 100px
+.home6
+    padding: 140px 0 120px
+    @media (max-width: 1920px)
+        padding: 80px 0 60px
+    @media (max-width: 1200px)
+        padding: 60px 0 40px
+    @media (max-width: 769px)
+        padding: 40px 0 20px
+    @media (max-width: 576px)
+        padding: 20px 0 10px
+
+    .home6-txt-list
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%
+        text-align: center
+        .home6-txt1
+            font-size: 60px
+            font-weight: bold
+            font-stretch: normal
+            font-style: normal
+            line-height: 2.36
+            letter-spacing: 0.64px
+            @media (max-width: 1920px)
+                font-size: 35px
+            @media (max-width: 1200px)
+                font-size: 30px
+            @media (max-width: 769px)
+                font-size: 22px
+            @media (max-width: 576px)
+                font-size: 20px
+        .home6-txt2
+            font-size: 55px
+            font-weight: bold
+            font-stretch: normal
+            font-style: normal
+            line-height: 2.36
+            letter-spacing: 0.55px
+            @media (max-width: 1920px)
+                font-size: 35px
+            @media (max-width: 1200px)
+                font-size: 28px
+            @media (max-width: 769px)
+                font-size: 22px
+            @media (max-width: 576px)
+                font-size: 18px
+        .home6-txt3
+            font-size: 173px
+            font-weight: bold
+            font-stretch: normal
+            font-style: normal
+            line-height: 1.2
+            letter-spacing: 1.73px
+            @media (max-width: 1920px)
+                font-size: 85px
+            @media (max-width: 1200px)
+                font-size: 65px
+            @media (max-width: 769px)
+                font-size: 45px
+            @media (max-width: 576px)
+                font-size: 25px
+    .home6-img
+        margin-left: -10%
+        @media (max-width: 576px)
+            max-width: 280px
+            margin: 20px auto 0
+        img
+            width: 100%
+.home7
+    padding: 140px 0 120px
+    text-align: left
+    @media (max-width: 1920px)
+        padding: 80px 0 60px
+    @media (max-width: 1200px)
+        padding: 60px 0 40px
+    @media (max-width: 769px)
+        padding: 40px 0 20px
+    @media (max-width: 576px)
+        padding: 20px 0 10px
+    .home7-title
+        font-size: 159px
+        font-weight: bold
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.19
+        letter-spacing: 1.59px
+        @media (max-width: 1920px)
+            font-size: 92px
+        @media (max-width: 1200px)
+            font-size: 72px
+        @media (max-width: 769px)
+            font-size: 52px
+        @media (max-width: 576px)
+            font-size: 30px
+    .home7-txt
+        font-size: 42px
+        font-weight: 500
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.19
+        letter-spacing: 0.42px
+        margin: 60px 0 40px
+        @media (max-width: 1920px)
+            font-size: 32px
+            margin: 40px 0 30px
+        @media (max-width: 1200px)
+            font-size: 26px
+            margin: 30px 0 20px
+        @media (max-width: 769px)
+            font-size: 20px
+            margin: 20px 0 15px
+        @media (max-width: 576px)
+            font-size: 18px
+            margin: 15px 0 0
+    ul li
+        font-size: 42px
+        font-weight: 500
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.19
+        letter-spacing: 0.42px
+        @media (max-width: 1920px)
+            font-size: 32px
+        @media (max-width: 1200px)
+            font-size: 26px
+        @media (max-width: 992px)
+            font-size: 20px
+        @media (max-width: 769px)
+            font-size: 16px
+        @media (max-width: 576px)
+            font-size: 18px
+    .home7-img
+        @media (max-width: 576px)
+            margin-top: 20px
+        img
+            width: 100%
+.home8
+    padding: 140px 0 120px
+    text-align: left
+    @media (max-width: 1920px)
+        padding: 80px 0 60px
+    @media (max-width: 1200px)
+        padding: 60px 0 40px
+    @media (max-width: 769px)
+        padding: 40px 0 20px
+    @media (max-width: 576px)
+        padding: 20px 0
+    .home8-list
+
+        .home8-title
+            font-size: 119px
+            font-weight: bold
+            font-stretch: normal
+            font-style: normal
+            line-height: 1.19
+            letter-spacing: 1.19px
+            text-align: center
+            @media (max-width: 1920px)
+                font-size: 70px
+            @media (max-width: 1200px)
+                font-size: 60px
+            @media (max-width: 769px)
+                font-size: 40px
+            @media (max-width: 576px)
+                font-size: 30px
+        .home8-img
+            margin: 120px 0
+            @media (max-width: 1920px)
+                margin: 60px 0
+            @media (max-width: 1200px)
+                margin: 45px 0
+            @media (max-width: 769px)
+                margin: 25px 0
+            @media (max-width: 576px)
+                margin: 20px 0
+            img
+                width: 100%
+        .home8-txt-left
+            text-align: left
+        .home8-txt-right
+            text-align: right
+            @media (max-width: 576px)
+                text-align: left
+        .home8-item-title
+            font-size: 119px
+            font-weight: bold
+            font-stretch: normal
+            font-style: normal
+            line-height: 1.19
+            letter-spacing: 1.19px
+            margin: 20px 0 40px
+            @media (max-width: 1920px)
+                font-size: 70px
+            @media (max-width: 1200px)
+                font-size: 60px
+            @media (max-width: 769px)
+                font-size: 40px
+            @media (max-width: 576px)
+                font-size: 30px
+                margin: 40px 0 20px
+        .home8-item-txt
+            font-size: 42px
+            font-weight: 500
+            font-stretch: normal
+            font-style: normal
+            line-height: 1.19
+            letter-spacing: 0.42px
+            @media (max-width: 1920px)
+                font-size: 30px
+            @media (max-width: 1200px)
+                font-size: 26px
+            @media (max-width: 769px)
+                font-size: 20px
+            @media (max-width: 576px)
+                font-size: 18px
+
+.home9
+    padding: 140px 0 120px
+    text-align: left
+    @media (max-width: 1920px)
+        padding: 80px 0 60px
+    @media (max-width: 1200px)
+        padding: 60px 0 40px
+    @media (max-width: 769px)
+        padding: 40px 0 20px
+    @media (max-width: 576px)
+        padding: 20px 0 10px
+    .home9-img
+        max-width: 765px
+        margin: auto
+        @media (max-width: 1920px)
+            max-width: 465px
+        @media (max-width: 1200px)
+            max-width: 365px
+        @media (max-width: 769px)
+            max-width: 320px
+        @media (max-width: 576px)
+            max-width: 280px
+        img
+            width: 100%
+    .home9-title-list
+        margin: 40px 80px 60px
+        @media (max-width: 1920px)
+            margin: 30px 60px 45px
+        @media (max-width: 1200px)
+            margin: 25px 60px 35px
+        @media (max-width: 769px)
+            margin: 20px 40px 25px
+        @media (max-width: 576px)
+            margin: 15px 0 20px
+        .home9-title
+            font-size: 119px
+            font-weight: bold
+            font-stretch: normal
+            font-style: normal
+            line-height: 1.19
+            letter-spacing: 1.19px
+            text-align: left
+            @media (max-width: 1920px)
+                font-size: 70px
+            @media (max-width: 1200px)
+                font-size: 60px
+            @media (max-width: 769px)
+                font-size: 40px
+            @media (max-width: 576px)
+                font-size: 30px
+        .home9-subtitle
+            font-size: 60px
+            font-weight: bold
+            font-stretch: normal
+            font-style: normal
+            line-height: 2.37
+            letter-spacing: 0.6px
+            @media (max-width: 1920px)
+                font-size: 40px
+            @media (max-width: 1200px)
+                font-size: 30px
+            @media (max-width: 769px)
+                font-size: 20px
+            @media (max-width: 576px)
+                font-size: 20px
+                line-height: 1.5
+                letter-spacing: 0
+    .home9-txt
+        font-size: 42px
+        font-weight: 500
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.19
+        letter-spacing: 0.42px
+        text-align: center
+        @media (max-width: 1920px)
+            font-size: 30px
+        @media (max-width: 1200px)
+            font-size: 26px
+        @media (max-width: 769px)
+            font-size: 20px
+        @media (max-width: 576px)
+            font-size: 18px
+.home10
+    padding: 140px 0 0
+    text-align: center
+    @media (max-width: 1920px)
+        padding: 80px 0 0
+    @media (max-width: 1200px)
+        padding: 60px 0 0
+    @media (max-width: 769px)
+        padding: 40px 0 0
+    @media (max-width: 576px)
+        padding: 20px 0 0
+    .home10-title
+        font-size: 109px
+        font-weight: bold
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.19
+        letter-spacing: 1.09px
+        @media (max-width: 1920px)
+            font-size: 70px
+        @media (max-width: 1200px)
+            font-size: 60px
+        @media (max-width: 769px)
+            font-size: 40px
+        @media (max-width: 576px)
+            font-size: 30px
+    .home10-button
+        margin: 50px 0 120px
+        @media (max-width: 1920px)
+            margin: 40px 0 60px
+        @media (max-width: 1200px)
+            margin: 35px 0 70px
+        @media (max-width: 769px)
+            margin: 30px 0 60px
+        @media (max-width: 576px)
+            margin: 20px 0 40px
+        .button
+            background-color: transparent
+            border: 1px solid $button-hover-color
+            color: $txt-color-black
+            font-weight: 600
+            &:hover
+                background-color: $second-blue-color
+                color: $button-txt-color
+                border: 1px solid $button-txt-color
+    .home10-img
+        max-width: 1000px
+        margin: 0 auto -5px
+        @media (max-width: 1920px)
+            max-width: 600px
+        @media (max-width: 1200px)
+            max-width: 500px
+        @media (max-width: 769px)
+            max-width: 400px
+        @media (max-width: 576px)
+            width: 100%
+        img
+            width: 100%

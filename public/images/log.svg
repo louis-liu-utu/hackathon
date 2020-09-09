@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="716.849" height="716.85" viewBox="0 0 716.849 716.85">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0886cc"/>
+      <stop offset="1" stop-color="#005aa7"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.206" stop-color="#7d8183"/>
+      <stop offset="0.444" stop-color="#dadadb"/>
+      <stop offset="0.689" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_3879" data-name="Group 3879" transform="translate(-52.625 -57.015)">
+    <path id="App_Icon_Placeholder" data-name="App Icon Placeholder" d="M302.54,57.015H519.554c71.971,0,107.938,0,146.677,12.242a152.252,152.252,0,0,1,90.991,91C769.474,199,769.474,234.98,769.474,306.936v217c0,71.966,0,107.943-12.252,146.677a152.2,152.2,0,0,1-90.991,91c-38.739,12.253-74.706,12.253-146.677,12.253H302.54c-71.961,0-107.933,0-146.666-12.253a152.2,152.2,0,0,1-91-91C52.625,631.882,52.625,595.9,52.625,523.939v-217c0-71.955,0-107.933,12.252-146.677a152.246,152.246,0,0,1,91-91C194.607,57.015,230.58,57.015,302.54,57.015h0" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    <g id="Group_3878" data-name="Group 3878" transform="translate(210.401 210.577)">
+      <path id="Path_1291" data-name="Path 1291" d="M280.559,151.373a81.238,81.238,0,0,0-77.515,56.963H118.019v24.227H361.754A81.193,81.193,0,0,0,280.559,151.373Z" transform="translate(73.481 199.04)" fill="url(#linear-gradient-2)"/>
+      <g id="Group_3877" data-name="Group 3877">
+        <path id="Path_1292" data-name="Path 1292" d="M358.033,85.766H488.879V338.6a212.964,212.964,0,0,1-11.724,71.015,153.494,153.494,0,0,1-36.763,58.437q-25.044,25.028-52.54,35.144-38.216,14.173-91.765,14.175a577.928,577.928,0,0,1-67.591-4.337q-36.621-4.35-61.225-17.214t-45.015-36.592Q101.85,435.5,94.321,410.339,82.168,369.84,82.165,338.6V85.766H213.006V344.617q0,34.706,19.249,54.233t53.411,19.522q33.865,0,53.117-19.233t19.249-54.522Z" transform="translate(-82.165 -85.766)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

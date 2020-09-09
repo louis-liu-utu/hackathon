@@ -1,0 +1,51 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "974269",
+      "name": "comment",
+      "font_class": "comment",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "5428539",
+      "name": "star",
+      "font_class": "star",
+      "unicode": "e71a",
+      "unicode_decimal": 59162
+    },
+    {
+      "icon_id": "6145917",
+      "name": "like",
+      "font_class": "like",
+      "unicode": "e6fc",
+      "unicode_decimal": 59132
+    },
+    {
+      "icon_id": "6986878",
+      "name": "stars",
+      "font_class": "stars",
+      "unicode": "e8c4",
+      "unicode_decimal": 59588
+    },
+    {
+      "icon_id": "10043887",
+      "name": "Player",
+      "font_class": "Player",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "13660587",
+      "name": "Share - Outline",
+      "font_class": "Share-Outline",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    }
+  ]
+}

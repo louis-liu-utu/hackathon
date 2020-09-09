@@ -1,0 +1,178 @@
+html,body
+    height: 100%
+    font: $base-font-size $font-family-base
+@media (min-width: 1920px)
+    .container
+        max-width: 1698px
+.header
+    background-color: transparent
+    .container
+        padding: 0
+        .log-txt
+            font-weight: bold
+            letter-spacing: 0.44px
+            color: $txt-color-black
+            font-size: 44px
+            margin: 50px 0 30px
+            @media (max-width: 1920px)
+                font-size: 36px
+                margin: 40px 0 24px
+            @media (max-width: 1200px)
+                font-size: 28px
+                margin: 30px 0 18px
+            @media (max-width: 576px)
+                font-size: 20px
+                margin: 20px 10px 12px
+.footer
+    background-color: $background-grey
+    .container
+        padding: 175px 0 285px
+        @media (max-width: 1920px)
+            padding: 125px 0 225px
+        @media (max-width: 1200px)
+            padding: 75px 0 165px
+        @media (max-width: 576px)
+            padding: 40px 15px 60px
+        .logo
+            margin-left: 18px
+            background: url("/images/log.svg")
+            width: 118px
+            height: 118px
+            background-size: 118px 118px
+            background-repeat: no-repeat
+            @media (max-width: 1920px)
+                width: 100px
+                height: 100px
+                background-size: 100px 100px
+            @media (max-width: 1200px)
+                width: 80px
+                height: 80px
+                background-size: 80px 80px
+            @media (max-width: 576px)
+                width: 40px
+                height: 40px
+                background-size: 40px 40px
+                margin-left: 0
+        h3
+            font-size: 30px
+            margin-bottom: 80px
+            font-weight: 500
+            @media (max-width: 1920px)
+                font-size: 22px
+                margin-bottom: 80px
+            @media (max-width: 1200px)
+                font-size: 18px
+                margin-bottom: 60px
+            @media (max-width: 576px)
+                font-size: 14px
+                margin-bottom: 40px
+        .col
+            @media (max-width: 576px)
+                margin-top: 30px
+            ul li a
+                text-decoration: none
+                font-weight: 200
+                font-size: 24px
+                line-height: 1.67
+                letter-spacing: 0.33px
+                font-stretch: normal
+                font-style: normal
+                color: $txt-color-black
+                &:hover
+                    font-weight: 400
+                @media (max-width: 1920px)
+                    font-size: 18px
+                    line-height: 1.5
+                @media (max-width: 1200px)
+                    font-size: 14px
+                    line-height: 1.4
+                @media (max-width: 576px)
+                    font-size: 10px
+                    line-height: 1.2
+
+
+.main-title
+    font-size: 87px
+    line-height: 1.18
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    letter-spacing: 0.87px
+    @media (max-width: 1920px)
+        font-size: 67px
+        line-height: 1.1
+    @media (max-width: 1200px)
+        font-size: 47px
+        line-height: 1.05
+    @media (max-width: 576px)
+        font-size: 34px
+        line-height: 1
+.main-txt
+    font-size: 44px
+    font-weight: 300
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.25
+    letter-spacing: 0.44px
+    @media (max-width: 1920px)
+        font-size: 30px
+        letter-spacing: 0.2px
+    @media (max-width: 1200px)
+        font-size: 24px
+        letter-spacing: 0.1px
+    @media (max-width: 576px)
+        font-size: 16px
+        text-align: left
+        letter-spacing: normal
+.second-title
+    font-size: 44px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 2.75
+    letter-spacing: 0.30px
+    @media (max-width: 1920px)
+        font-size: 36px
+        line-height: 2
+    @media (max-width: 1200px)
+        font-size: 30px
+        line-height: 1.5
+    @media (max-width: 576px)
+        font-size: 24px
+
+.button
+    display: inline-block
+    width: 481px
+    height: 86px
+    line-height: 86px
+    text-align: center
+    border-radius: 10px
+    border: none
+    background-color: $second-blue-color
+    font-size: 40px
+    font-stretch: normal
+    font-style: italic
+    letter-spacing: 0.44px
+    color: $button-txt-color
+    font-family: 'Raleway', sans-serif
+    text-decoration: none
+    @media (max-width: 1920px)
+        width: 300px
+        height: 70px
+        line-height: 70px
+        font-size: 25px
+        letter-spacing: 0
+        border-radius: 5px
+    @media (max-width: 1200px)
+        width: 250px
+        height: 50px
+        line-height: 50px
+        font-size: 18px
+        border-radius: 5px
+    @media (max-width: 576px)
+
+.button:hover
+    background-color: #fff
+    color: $button-hover-color
+    border: 1px solid $button-hover-color
+    transition: all .25s
