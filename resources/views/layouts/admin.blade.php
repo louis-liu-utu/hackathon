@@ -50,10 +50,14 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{url('admin/logout')}}">
+                    <a class="nav-link" href="{{url('admin/logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="material-icons">person</i>
                         <p>Logout Out</p>
                     </a>
+
+                    <form id="logout-form" action="{{ url('admin/logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
                 </li>
 
             </ul>
