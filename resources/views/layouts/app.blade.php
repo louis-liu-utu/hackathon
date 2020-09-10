@@ -27,7 +27,9 @@
     <nav class="header">
         <div class="container">
             <div class="log-txt">
-                UTU.ONE
+                <a href="{{url('/')}}">
+                    UTU.ONE
+                </a>
             </div>
         </div>
     </nav>
