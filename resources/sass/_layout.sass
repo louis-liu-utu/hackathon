@@ -176,3 +176,38 @@ html,body
     color: $button-hover-color
     border: 1px solid $button-hover-color
     transition: all .25s
+.to-top
+    position: fixed
+    text-decoration: none
+    border-radius: 50%
+    height: 36px
+    width: 36px
+    bottom: 30px
+    right: 30px
+    background: $second-blue-color
+    color: $home-5-color
+    transition: .3s ease
+    z-index: 2
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 40px
+    transform: translateY(10px)
+    visibility: hidden
+    opacity: 0
+    @media (max-width: 576px)
+        right: 10px
+    .iconfont
+        font-size: 24px
+    &:hover
+        transform: scale(1.2)
+        @media (max-width: 576px)
+            transform: scale(1)
+.visible
+    visibility: visible
+    opacity: 1
+@media screen and (prefers-reduced-motion: no-preference)
+    html,body
+        scroll-behavior: smooth
+
+

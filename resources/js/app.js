@@ -1,3 +1,5 @@
+import "./common"
+
 const form = document.querySelector('form');
 const requiredElements = document.querySelectorAll('form [required]');
 

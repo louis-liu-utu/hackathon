@@ -85,6 +85,10 @@
     </div>
 </footer>
 
+<div class="to-top">
+    <span class="iconfont icon-arrow-up"></span>
+</div>
+
 </body>
 
 @yield('javascript')

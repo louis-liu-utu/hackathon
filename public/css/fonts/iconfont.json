@@ -1,10 +1,31 @@
 {
-  "id": "",
-  "name": "",
+  "id": "2057062",
+  "name": "utu",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "1445358",
+      "name": "star-circle",
+      "font_class": "star-circle",
+      "unicode": "e8be",
+      "unicode_decimal": 59582
+    },
+    {
+      "icon_id": "14679363",
+      "name": "star_circle_fill",
+      "font_class": "star_circle_fill",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    },
+    {
+      "icon_id": "8777509",
+      "name": "arrow_up",
+      "font_class": "icon-test",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
     {
       "icon_id": "974269",
       "name": "comment",
@@ -13,25 +34,11 @@
       "unicode_decimal": 58957
     },
     {
-      "icon_id": "5428539",
-      "name": "star",
-      "font_class": "star",
-      "unicode": "e71a",
-      "unicode_decimal": 59162
-    },
-    {
       "icon_id": "6145917",
       "name": "like",
       "font_class": "like",
       "unicode": "e6fc",
       "unicode_decimal": 59132
-    },
-    {
-      "icon_id": "6986878",
-      "name": "stars",
-      "font_class": "stars",
-      "unicode": "e8c4",
-      "unicode_decimal": 59588
     },
     {
       "icon_id": "10043887",
