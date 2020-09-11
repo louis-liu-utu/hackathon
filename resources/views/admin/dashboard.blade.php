@@ -21,7 +21,7 @@
 
 @section('javascript')
     <script>
-        $(document).ready(function() {
+      /*  $(document).ready(function() {
 
             dataDailySalesChart = {
                 labels: {!! $labels !!},
@@ -47,7 +47,7 @@
             var dailySalesChart = new Chartist.Line('#dailySalesChart1', dataDailySalesChart, optionsDailySalesChart);
             md.startAnimationForLineChart(dailySalesChart);
 
-        });
+        });*/
 
     </script>
 @endsection
