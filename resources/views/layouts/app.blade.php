@@ -63,7 +63,7 @@
 
                         <h3>COMMUNICATION</h3>
                         <ul>
-                            <li><a href="">Twitter</a></li>
+                            <li><a href="https://twitter.com/UTU47298207" target="_blank">Twitter</a></li>
                             <li><a href="">Blog</a></li>
                             <li><a href="{{url('contact-us')}}">Contact us</a></li>
                         </ul>
