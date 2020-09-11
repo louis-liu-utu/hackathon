@@ -94,3 +94,7 @@
     </section>
 
 @endsection
+
+@section('javascript')
+    <script src="{{url('js/index.js')}}"></script>
+@endsection

@@ -74,28 +74,22 @@
             We generally evaluate text and images under the same standard, but due to the potential for harm from
             unwanted exposure, there are some additional considerations for images and videos.
         </p>
-        <p class="main-txt">
-            UTU is a place to respectfully speak your mind, not a place to break the law. 
+        <p class="main-txt">UTU is a place to respectfully speak your mind, not a place to break the law. 
         </p>
-        <p class="main-txt"> 
-            Don’t post anything that violates any law.
+        <p class="main-txt">Don’t post anything that violates any law.
         </p>
-        <p class="main-txt"> 
-            Don’t post anything that facilitates, incites or encourages the violation of any law.
+        <p class="main-txt">Don’t post anything that facilitates, incites or encourages the violation of any law.
         </p>
-        <p class="main-txt"> 
-            Wherever you’re located, be mindful of the laws that apply to you.
+        <p class="main-txt">Wherever you’re located, be mindful of the laws that apply to you.
         </p>
-        <p class="main-txt"> 
-            Most of the following types of content and conduct are illegal in many countries, and are strictly not
+        <p class="main-txt">Most of the following types of content and conduct are illegal in many countries, and are strictly not
             permitted on UTU.
         </p>
         <div class="ground-rules-list">
             <h3 class="second-title">
                 Infringements
             </h3>
-            <p class="main-txt"> 
-                We respect the intellectual property rights of others and we expect you to do the same, including
+            <p class="main-txt">We respect the intellectual property rights of others and we expect you to do the same, including
                 copyrights, trademarks, and patents. Please avoid including any legally protected material in a post
                 without a legal justification for doing so (such as a formal license, fair use justification, etc.).
                 Under our Copyright Policy, we will remove posts in accordance with the Digital Millennium Copyright Act
@@ -105,88 +99,68 @@
             <h3 class="second-title">
                 Exploitation of Minors
             </h3>
-            <p class="main-txt"> 
-                Don’t post any material that exploits or harms a minor, including depictions, images, videos, or
+            <p class="main-txt">Don’t post any material that exploits or harms a minor, including depictions, images, videos, or
                 descriptions of nude minors, sexually suggestive images of a minor, or child sexual abuse.
             </p>
-            <p class="main-txt"> 
-                Don’t link to any third-party websites containing any of the above or instructions on how to find them.
+            <p class="main-txt">Don’t link to any third-party websites containing any of the above or instructions on how to find them.
             </p>
-            <p class="main-txt"> 
-                Don’t solicit minors or direct your content at minors.
+            <p class="main-txt">Don’t solicit minors or direct your content at minors.
             </p>
             <h3 class="second-title">
                 Promotion of Illegal Activity
             </h3>
-            <p class="main-txt"> 
-                Avoid posting anything that advertises or promotes illegal or legally restricted goods or services,
+            <p class="main-txt">Avoid posting anything that advertises or promotes illegal or legally restricted goods or services,
                 including (but not limited to):
             </p>
-            <p class="main-txt"> 
-                Drugs and controlled substances, including cannabis, alcohol, and tobacco 
+            <p class="main-txt">Drugs and controlled substances, including cannabis, alcohol, and tobacco 
             </p>
             <h3 class="second-title">
                 Sexual services
             </h3>
-            <p class="main-txt"> 
-                Weapons, including firearms, ammunition, and explosives, and instructions on making any of the above
+            <p class="main-txt">Weapons, including firearms, ammunition, and explosives, and instructions on making any of the above
             </p>
             <h3 class="second-title">
                 Gambling
             </h3>
-            <p class="main-txt"> 
-                Fraudulent financial ventures or activities of any kind
+            <p class="main-txt">Fraudulent financial ventures or activities of any kind
             </p>
             <h3 class="second-title">
                 Hate Speech
             </h3>
-            <p class="main-txt"> 
-                UTU is a home for civil and respectful discourse, not a place to spread hate.
+            <p class="main-txt">UTU is a home for civil and respectful discourse, not a place to spread hate.
             </p>
-            <p class="main-txt"> 
-                Don’t promote or incite hatred against any person or group of people.
+            <p class="main-txt">Don’t promote or incite hatred against any person or group of people.
             </p>
-            <p class="main-txt"> 
-                This includes:
+            <p class="main-txt">This includes:
             </p>
-            <p class="main-txt"> 
-                Promoting or inciting violence, terrorism, or real-world physical harm against any person or group of
+            <p class="main-txt">Promoting or inciting violence, terrorism, or real-world physical harm against any person or group of
                 people.
             </p>
-            <p class="main-txt"> 
-                Referring to any person or group of people using slurs, offensive stereotypes, or derogatory or
+            <p class="main-txt">Referring to any person or group of people using slurs, offensive stereotypes, or derogatory or
                 insulting terms based on characteristics such as their race, ethnicity, faith, country of origin,
                 disability, health status, age, gender, or sexual orientation.
             </p>
-            <p class="main-txt"> 
-                Using veiled or coded language to try to skirt this rule.
+            <p class="main-txt">Using veiled or coded language to try to skirt this rule.
             </p>
-            <p class="main-txt"> 
-                Posting hateful symbols, racist images, or other material promoting hate or terrorism
+            <p class="main-txt">Posting hateful symbols, racist images, or other material promoting hate or terrorism
             </p>
-            <p class="main-txt"> 
-                Exception! Context matters. Discussing difficult topics may sometimes mean including or referring to
+            <p class="main-txt">Exception! Context matters. Discussing difficult topics may sometimes mean including or referring to
                 potentially troubling language or imagery. We will take the overall context of the post into account. If
                 the intent of the post appears to be a genuine, thoughtful discussion or critical commentary and not to
                 spread hate, it may be allowed.
             </p>
-            <h3 class="second-title">
-                Threats and Harassment
+            <h3 class="second-title">Threats and Harassment
             </h3>
-            <p class="main-txt"> 
-                UTU is a welcoming and courteous community, not a place for targeted attacks and bullying.
+            <p class="main-txt">UTU is a welcoming and courteous community, not a place for targeted attacks and bullying.
             </p>
-            <p class="main-txt"> 
-                Don’t post anything that threatens or intimidates someone. UTU is about empowering people, not silencing
+            <p class="main-txt">Don’t post anything that threatens or intimidates someone. UTU is about empowering people, not silencing
                 them.
             </p>
-            <p class="main-txt"> 
-                Don’t engage in the harassment of other UTU users, including making ad hominem personal attack posts
+            <p class="main-txt">Don’t engage in the harassment of other UTU users, including making ad hominem personal attack posts
                 about them, repeated insulting or demeaning comments in response to their posts. Do not harass or stalk
                 other UTU users online or offline using personal information they have provided on UTU.
             </p>
-            <p class="main-txt"> 
-                Don’t encourage others to shame, harass, insult or otherwise attack someone.
+            <p class="main-txt">Don’t encourage others to shame, harass, insult or otherwise attack someone.
             </p>
             <p class="main-txt">
                 Invasions of Privacy or Defamation
@@ -300,8 +274,7 @@
             <p class="main-txt">
                 Don’t pretend to be anyone else.
             </p>
-            <p class="main-txt"> 
-                Don’t try to sell anything fake.
+            <p class="main-txt">Don’t try to sell anything fake.
             </p>
             <p class="main-txt">
                 Don’t intentionally share facts or information you know to be false.
@@ -508,4 +481,8 @@
         </div>
     </section>
 
+@endsection
+
+@section('javascript')
+    <script src="{{url('js/index.js')}}"></script>
 @endsection

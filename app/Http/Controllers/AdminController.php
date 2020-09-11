@@ -24,7 +24,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-       /* $customers = Customer::lastLatestMonth()->get();
+       $customers = Customer::lastLatestMonth()->countByDate()->get();
 
         $labels = $customers->map(function ($customer) {
             return date( 'm/d',strtotime($customer->date));
@@ -33,6 +33,8 @@ class AdminController extends Controller
         $series = $customers->map(function ($customer) {
             return $customer->count;
         })->toJson();
+
+        /*
         $labels = [];
         $index = 0;
         foreach ($customers as $customer) {
@@ -46,7 +48,7 @@ class AdminController extends Controller
             }
         }*/
 
-        return view('admin.dashboard');
+        return view('admin.dashboard',compact('labels','series'));
     }
 
 
