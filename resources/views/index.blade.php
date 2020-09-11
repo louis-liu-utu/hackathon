@@ -19,9 +19,9 @@
                          <h1 class="home1-txt-title1-txt">
                          redefine
                          </h1>
-                         <div class="home1-txt-sm">
+                        {{-- <div class="home1-txt-sm">
                              Watch film <div class="icon-player"></div>
-                         </div>
+                         </div>--}}
                      </div>
                      <div class="home1-txt-title-img">
                          <img src="{{url('/images/home-phone1.png')}}" alt="utu social platform">
@@ -84,8 +84,11 @@
 
             EOSIO open source blockchain infrastructure
             and smart contract provide transparency and trust.
+            <br>
             No shady algorithm and misleading information
+            <br>
             No profit driven manipulation news feed
+            <br>
             UTU gives control back to users and community.
         </p>
     </div>

@@ -20,9 +20,9 @@
         height: 30px
         flex: 0 0 30px
     @media (max-width: 576px)
-        width: 24px
-        height: 24px
-        flex: 0 0 24px
+        width: 16px
+        height: 16px
+        flex: 0 0 16px
     &.circle-red
         background-color: $circle-red
     &.circle-grey
@@ -438,8 +438,10 @@
                 @media (max-width: 769px)
                     font-size: 50px
                 @media (max-width: 576px)
-                    font-size: 30px
-                    display: inline-block
+                    font-size: 24px
+                    max-width: 300px
+                    margin: auto
+
             .home5-txt
                 margin-top: 100px
                 @media (max-width: 1920px)
@@ -449,7 +451,7 @@
                 @media (max-width: 769px)
                     margin-top: 40px
                 @media (max-width: 576px)
-                    margin-top: 25px
+                    margin-top: 40px
                 ul li
                     font-size: 42px
                     font-weight: 500
@@ -464,7 +466,7 @@
                     @media (max-width: 769px)
                         font-size: 16px
                     @media (max-width: 576px)
-                        font-size: 16px
+                        font-size: 14px
                 .icons-list
                     display: flex
                     justify-content: flex-end
@@ -478,7 +480,7 @@
                         margin-top: 20px
                     @media (max-width: 576px)
                         margin-top: 15px
-                        justify-content: space-around
+                        justify-content: center
                     .iconfont
                         margin-left: 130px
                         font-size: 42px
@@ -492,7 +494,10 @@
                             margin-left: 50px
                             font-size: 16px
                         @media (max-width: 576px)
-                            margin-left: 0
+                            margin-left: 60px
+                        &.iconfont:first-child
+                            @media (max-width: 576px)
+                                margin-left: 0
             .home5-img
                 position: absolute
                 left: 10%
