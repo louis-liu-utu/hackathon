@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Louis Liu',
-                'password' => \Illuminate\Support\Facades\Hash::make('Ll#23456')
+                'password' => \Illuminate\Support\Facades\Hash::make('ZbDIJovlyscFvjBZBSD7hiX/xjwkDfK4ZRv6x9')
             ]
         );
 
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'utu admin',
-                'password' => \Illuminate\Support\Facades\Hash::make('admin123456')
+                'password' => \Illuminate\Support\Facades\Hash::make('ZbDIJovlyscFvjBZBSD7hiX/xjwkDfK4ZRv6x9')
             ]
         );
     }
