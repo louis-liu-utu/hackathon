@@ -256,7 +256,7 @@
                         No tech knowledge required
                     </p>
                     <p class="home8-item-txt">
-                        Anyone can Send, receive and trade
+                        Anyone can send, receive and trade
                     </p>
                 </div>
 
@@ -265,8 +265,10 @@
                         Secure
                     </h4>
                     <p class="home8-item-txt">
-                        All your assetsare recorded on the
-                        EOSIO open source blockchain
+                        All your assets are recorded on
+                        </p>
+                    <p class="home8-item-txt">
+                    the EOSIO open source blockchain
                         Secure and immutable
                     </p>
                 </div>

@@ -56,12 +56,7 @@
             <li>
                 <span class="icon"></span> Swap your token
             </li>
-            <li>
-                <span class="icon"></span> Collect your token
-            </li>
-            <li>
-                <span class="icon"></span> Swap your token
-            </li>
+
         </ul>
     </div>
 </section>
