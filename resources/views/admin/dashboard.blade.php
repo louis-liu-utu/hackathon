@@ -24,9 +24,9 @@
       /*  $(document).ready(function() {
 
             dataDailySalesChart = {
-                labels: {!! $labels !!},
+                labels: ,
                 series: [
-                    {!! $series !!}
+
                 ]
             };
 
