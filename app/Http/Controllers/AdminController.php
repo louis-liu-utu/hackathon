@@ -24,17 +24,16 @@ class AdminController extends Controller
      */
     public function index()
     {
-       /* $customers = Customer::lastLatestMonth()->countByDate()->get();
+        $customers = Customer::lastLatestMonth()->countByDate()->get();
         $labels = $customers->map(function ($customer) {
             return date( 'm/d',strtotime($customer->date));
         })->toJson();
 
         $series = $customers->map(function ($customer) {
             return $customer->count;
-        })->toJson();*/
+        })->toJson();
 
-        //return view('admin.dashboard',compact('labels','series'));
-        return view('admin.dashboard');
+        return view('admin.dashboard',compact('labels','series'));
     }
 
 
