@@ -65,9 +65,9 @@
     </div>
     <div class="main-panel">
 
-        <div class="content">
-            @yield('content')
-        </div>
+
+
+        @yield('content')
         <footer class="footer">
             <div class="container-fluid">
 
@@ -293,6 +293,9 @@
                 }, 1000);
 
             });
+
+            $('#myTable').DataTable();
+
         });
     });
 </script>
@@ -300,9 +303,11 @@
     $(document).ready(function() {
         // Javascript method's body can be found in assets/js/demos.js
         md.initDashboardPageCharts();
-
     });
+
 </script>
+
+@yield('javascript')
 </body>
 
 </html>
