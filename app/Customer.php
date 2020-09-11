@@ -28,6 +28,6 @@ class Customer extends Model
     }
 
     public function scopeCountByDate($query) {
-        return $query->select(DB::raw('DATE(created_at) as date'), DB::raw('count(*) as count'))->groupBy('date')->orderBy('date');
+        return $query->select(DB::raw('DATE(created_at) as date'), DB::raw('count(*) as count'))->groupBy('date');
     }
 }
