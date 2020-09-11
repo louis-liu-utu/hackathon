@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container-fluid mt-lg-5">
+    <div class="content">
+     <div class="container-fluid mt-lg-5">
        <div class="row">
                    <div class="col-md-8">
                        <div class="card card-chart">
@@ -16,6 +17,7 @@
                    </div>
 
                </div>
+    </div>
     </div>
 @endsection
 
