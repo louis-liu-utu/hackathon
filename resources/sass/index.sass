@@ -58,8 +58,10 @@
         padding-top: 160%
         background-size: cover
         background-position: 45%
+    @media (max-width: 400px)
+        padding-top: 180%
     @media (max-width: 330px)
-        padding-top: 190%
+        padding-top: 210%
     .home1-txt
         position: absolute
         width: 100%
@@ -100,19 +102,19 @@
                 @media (max-width: 576px)
                     margin-right: 0
             .home1-txt-title-img
-                width: 350px
+                width: 450px
                 @media (max-width: 1920px)
-                    width: 220px
+                    width: 320px
                 @media (max-width: 1200px)
-                    width: 180px
+                    width: 280px
                 @media (max-width: 769px)
-                    width: 180px
+                    width: 240px
                 @media (max-width: 576px)
                     position: absolute
-                    width: 180px
+                    width: 260px
                     position: absolute
                     left: 50%
-                    margin-left: -90px
+                    margin-left: -130px
                     top: 130%
                 img
                     width: 100%
@@ -496,6 +498,12 @@
                         font-size: 17px
                         line-height: 24px
                         letter-spacing: 0
+                ul .home5-txt-bold
+                    @media (max-width: 576px)
+                        font-size: 20px
+                        font-weight: bold
+                        margin-top: 10px
+
                 .icons-list
                     display: flex
                     justify-content: flex-end
@@ -521,12 +529,15 @@
                             font-size: 20px
                         @media (max-width: 769px)
                             margin-left: 50px
-                            font-size: 16px
+                            font-size: 20px
+                            font-weight: bold
                         @media (max-width: 576px)
                             margin-left: 60px
                         &.iconfont:first-child
                             @media (max-width: 576px)
                                 margin-left: 0
+                    .icon-like
+                        color: red
             .home5-img
                 position: absolute
                 left: 10%
@@ -607,8 +618,9 @@
             @media (max-width: 769px)
                 font-size: 22px
             @media (max-width: 576px)
-                font-size: 18px
+                font-size: 16px
                 letter-spacing: 0
+                font-weight: 500
         .home6-txt3
             font-size: 173px
             font-weight: bold
@@ -891,7 +903,7 @@
     @media (max-width: 769px)
         padding: 40px 0 0
     @media (max-width: 576px)
-        padding: 20px 0 0
+        padding: 40px 0 0
     .home10-title
         font-size: 109px
         font-weight: bold

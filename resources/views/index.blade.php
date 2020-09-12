@@ -43,11 +43,11 @@
             built to benefit members
         </h1>
         <p class="home2-txt">
-            Tradition social media platforms are built to invade privacy
+            Traditional social media platforms are built to invade privacy
             and sell personal data to profit the few.
         </p>
         <p class="home2-txt">
-            UTU gives the benefit back to members by reward attention.
+            UTU gives the benefit back to members by rewarding their attention.
         </p>
     </div>
 </section>
@@ -83,13 +83,13 @@
         <p class="home2-txt">
 
             EOSIO open source blockchain infrastructure
-            and smart contract provide transparency and trust.
+            and smart contract provide transparency and trust
             <br>
             No shady algorithm and misleading information
             <br>
             No profit driven manipulation news feed
             <br>
-            UTU gives control back to users and community.
+            UTU gives control back to users and community
         </p>
     </div>
 </section>
@@ -161,13 +161,13 @@
                 <div class="home5-txt">
                     <ul>
                         <li>Traditional social platforms sell users attention</li>
-                        <li>UTU reward members action</li>
+                        <li>UTU rewards members action</li>
                         <li>Complete community tasks</li>
                         <li>and get reward tokens by</li>
                         <li class="icons-list">
                             <i class="iconfont icon-Share-Outline"></i> <i class="iconfont icon-like"></i> <i class="iconfont icon-comment"></i>
                         </li>
-                        <li>Post Share Like Comment</li>
+                        <li class="home5-txt-bold">Post Share Like Comment</li>
                     </ul>
                 </div>
                 <div class="home5-img">
@@ -286,16 +286,18 @@
             </div>
             <div class="home9-title-list">
                 <h1 class="home9-title">
-                    Defi 2.0
+                    Free & Instant
                 </h1>
-                <div class="home9-subtitle">
+              {{--  <div class="home9-subtitle">
                     Free and instant swap between DAC tokens
-                </div>
+                </div>--}}
             </div>
 
             <p class="home9-txt">
-                Next Gen AMM system leveraging the world most powerful blockchain - EOSIO
-                provide easy&smooth experience for mass adoption
+                Next Gen AMM system leveraging the world
+                most powerful blockchain - EOSIO
+                provide easy&smooth experience for mass
+                adoption
             </p>
         </div>
     </div>
@@ -303,6 +305,7 @@
 
 <div class="home10">
     <div class="container">
+
         <h4 class="home10-title">
             Be part of the movement
         </h4>
