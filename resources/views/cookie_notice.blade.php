@@ -24,5 +24,5 @@
 @endsection
 
 @section('javascript')
-    <script src="{{url('js/index.js')}}"></script>
+    <script src="{{mix('js/index.js')}}"></script>
 @endsection

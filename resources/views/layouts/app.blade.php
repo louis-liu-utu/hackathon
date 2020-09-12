@@ -17,7 +17,7 @@
 
 
     @section('style')
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{mix('css/app.css')}}">
     @show
     <link rel="stylesheet" href="{{asset('css/fonts/iconfont.css')}}">
 

@@ -5,7 +5,7 @@
 @section('description', 'UTU is a social platform built on blockchain,for real people only and benefit members')
 
 @section('style')
-    <link rel="stylesheet" href="{{asset('css/index.css')}}">
+    <link rel="stylesheet" href="{{mix('css/index.css')}}">
 @endsection
 
 @section('content')
@@ -320,5 +320,5 @@
 @endsection
 
 @section('javascript')
-    <script src="{{url('js/index.js')}}"></script>
+    <script src="{{mix('js/index.js')}}"></script>
 @endsection
