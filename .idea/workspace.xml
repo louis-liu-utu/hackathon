@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8376fa6d-98d1-4395-be64-383afc568c86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/roadmap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/roadmap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/index.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +174,7 @@
       <workItem from="1599482752974" duration="3840000" />
       <workItem from="1599525242426" duration="28456000" />
       <workItem from="1599609665130" duration="25605000" />
-      <workItem from="1599779375382" duration="34063000" />
+      <workItem from="1599779375382" duration="34259000" />
     </task>
     <servers />
   </component>
