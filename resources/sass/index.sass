@@ -20,9 +20,9 @@
         height: 30px
         flex: 0 0 30px
     @media (max-width: 576px)
-        width: 16px
-        height: 16px
-        flex: 0 0 16px
+        width: 17px
+        height: 17px
+        flex: 0 0 17px
     &.circle-red
         background-color: $circle-red
     &.circle-grey
@@ -55,16 +55,17 @@
     @media (max-width: 769px)
         background-size: 100% 100%
     @media (max-width: 576px)
-        padding-top: 150%
+        padding-top: 160%
         background-size: cover
-        background-position: center
-
+        background-position: 45%
+    @media (max-width: 330px)
+        padding-top: 190%
     .home1-txt
         position: absolute
         width: 100%
         top: 10%
         @media (max-width: 576px)
-            top: 20%
+            top: 10%
         .home1-txt-title
             font-size: 161px
             font-weight: 600
@@ -82,18 +83,22 @@
             @media (max-width: 769px)
                 font-size: 65px
             @media (max-width: 576px)
+                flex-direction: column
                 font-size: 40px
+                text-align: center
+                letter-spacing: 0
+
             .home1-txt-title1
                 margin-left: 1%
                 margin-top: 10px
                 @media (max-width: 769px)
                     margin-left: 5%
                 @media (max-width: 576px)
-                    margin-left: 10%
+                    margin-left: 0
             .home1-txt-title2
                 margin-right: 5%
                 @media (max-width: 576px)
-                    margin-right: 10%
+                    margin-right: 0
             .home1-txt-title-img
                 width: 350px
                 @media (max-width: 1920px)
@@ -104,10 +109,10 @@
                     width: 180px
                 @media (max-width: 576px)
                     position: absolute
-                    width: 140px
+                    width: 180px
                     position: absolute
                     left: 50%
-                    margin-left: -70px
+                    margin-left: -90px
                     top: 130%
                 img
                     width: 100%
@@ -181,6 +186,8 @@
             margin-bottom: 30px
             font-size: 28px
             line-height: 37px
+            text-align: left
+            letter-spacing: 0
     .home2-txt
         font-size: 42px
         font-weight: 500
@@ -206,7 +213,8 @@
             font-size: 17px
             line-height: 24px
             margin: 20px auto
-
+            text-align: left
+            letter-spacing: 0
 .home3
     .container
         padding: 0
@@ -223,9 +231,10 @@
             @media (max-width: 769px)
                 padding: 60px 0
             @media (max-width: 576px)
-                text-align: center
+                text-align: left
                 overflow: hidden
                 padding: 40px 0
+                margin-left: 15px
             .home3-title
                 font-size: 109px
                 font-weight: bold
@@ -245,6 +254,8 @@
                     font-size: 28px
                     line-height: 37px
                     display: inline-block
+                    text-align: left
+                    letter-spacing: 0
             .home3-txt
                 margin-top: 90px
                 @media (max-width: 1920px)
@@ -275,6 +286,7 @@
                     @media (max-width: 576px)
                         font-size: 17px
                         line-height: 24px
+                        letter-spacing: 0
             .home3-img
                 position: absolute
                 right: 0
@@ -324,6 +336,8 @@
         @media (max-width: 576px)
             font-size: 28px
             line-height: 37px
+            text-align: left
+            letter-spacing: 0
     .home4-list
         .col-sm-12
             margin: 60px 0
@@ -392,12 +406,12 @@
                 @media (max-width: 769px)
                     font-size: 18px
                 @media (max-width: 576px)
-                    font-size: 17px
-                    line-height: 24px
+                    font-size: 15px
+                    line-height: 15px
                     text-align: left
                     font-weight: 500
-                @media (max-width: 400px)
-                    font-size: 17px
+                    letter-spacing: 0
+
         .home4-item-img
             flex-direction: column
             @media (max-width: 576px)

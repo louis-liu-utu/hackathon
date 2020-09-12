@@ -18,6 +18,4 @@ mix.js('resources/js/index.js', 'public/js')
     .sass('resources/sass/index.sass', 'public/css');
 mix.sass('resources/sass/roadmap.sass', 'public/css');
 
-if (mix.inProduction()) {
-    mix.version();
-}
+mix.version();
