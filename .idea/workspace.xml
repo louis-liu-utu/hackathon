@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8376fa6d-98d1-4395-be64-383afc568c86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/sass/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/index.sass" afterDir="false" />
-    </list>
+    <list default="true" id="8376fa6d-98d1-4395-be64-383afc568c86" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,7 +172,7 @@
       <workItem from="1599482752974" duration="3840000" />
       <workItem from="1599525242426" duration="28456000" />
       <workItem from="1599609665130" duration="25605000" />
-      <workItem from="1599779375382" duration="34259000" />
+      <workItem from="1599779375382" duration="34563000" />
     </task>
     <servers />
   </component>
