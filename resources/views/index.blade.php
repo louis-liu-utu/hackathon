@@ -24,7 +24,7 @@
                          </div>--}}
                      </div>
                      <div class="home1-txt-title-img">
-                         <img src="{{url('/images/home-phone1.png')}}" alt="utu social platform">
+                         <img src="{{url('/images/home-phone1.png?v=1')}}" alt="utu social platform">
                      </div>
                      <h1 class="home1-txt-title2">
                          social
