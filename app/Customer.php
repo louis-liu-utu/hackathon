@@ -24,10 +24,10 @@ class Customer extends Model
 
     public function scopeLastLatestMonth($query) {
         $lastMonthStartAt = Carbon::now()->subDays(30);
-        return $query->where('created_at', '>' , $lastMonthStartAt)->orderBy('created_at', 'desc');
+        return $query->where('created_at', '>' , $lastMonthStartAt);
     }
 
     public function scopeCountByDate($query) {
-        return $query->select(DB::raw('DATE(created_at) as date'), DB::raw('count(*) as count'))->groupBy('date');
+        return $query->select(DB::raw('DATE(created_at) as date'), DB::raw('count(*) as count'))->groupBy('date')->orderBy('date','asc');
     }
 }
