@@ -96,8 +96,7 @@
 <section class="home4">
     <div class="container">
         <h2 class="home4-title">
-            Innovation&
-            familiar features
+            Innovation & familiar features
         </h2>
         <div class="home4-list row">
             <div class="home4-item col-sm-12">
@@ -135,13 +134,13 @@
                     <i class="circle circle-grey"></i>
                     <p class="home4-item-txt">
                         Send picture,
-                        short video&files
+                        short video & files
                     </p>
                 </div>
                 <div class="home4-item-list home4-item-reverse home4-item-list-bottom">
                     <i class="circle circle-yellow"></i>
                     <p class="home4-item-txt">
-                        Chat,Voice&Video
+                        Chat,Voice & Video
                     </p>
                 </div>
             </div>
