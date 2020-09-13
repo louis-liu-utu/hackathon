@@ -170,7 +170,7 @@
                     </ul>
                 </div>
                 <div class="home5-img">
-                    <img src="{{url('/images/home5-phone.png')}}" alt="utu Share post in your private group">
+                    <img src="{{url('/images/home5-phone.png?v=1')}}" alt="utu Share post in your private group">
                 </div>
             </div>
         </div>
