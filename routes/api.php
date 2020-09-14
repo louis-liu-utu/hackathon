@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group([], function ($router) {
+    Route::post('/check_invited_code','ApiController@checkInvitedCode');
+    Route::post('/set_invited_code_used','ApiController@setInvitedCodeUsed');
+    Route::post('/generate_invited_code','ApiController@generateInvitedCode');
+});

@@ -53,4 +53,56 @@ class InvitedCodeService
             'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
         return implode('',Arr::random(Arr::shuffle($seeds),12));
     }
+
+    public function checkAndSetIfCodeExpired($code) {
+        $invitedCode = InvitedCode::where('code', $code)->first();
+        if($invitedCode && $invitedCode->expired_by < now()) {
+            $invitedCode->status = InvitedCode::STATUS_EXPIRED;
+            $invitedCode->save();
+            return false;
+        }
+        return true;
+    }
+
+    public function setCodeUsed($code) {
+        $invitedCode = InvitedCode::where('code', $code)->first();
+        if($invitedCode) {
+            $invitedCode->status = InvitedCode::STATUS_VERIFIED;
+            $invitedCode->save();
+            return true;
+        }
+        return false;
+    }
+
+    public function apiGenerateInvitedCodeAndSendEmail($request) {
+        $customer = Customer::create([
+            'email' => $request->email,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+        ]);
+
+        $randStr = $this->generateRandom12NumberAndLetter();
+        //make sure new rand str not exited
+        while($existedCode = InvitedCode::where('code', $randStr)->first()) {
+            $randStr = $this->generateRandom12NumberAndLetter();
+            $existedCode = InvitedCode::where('code', $randStr)->first();
+        }
+        $invitedCode = InvitedCode::firstOrNew([ 'code' => $randStr]);
+        $invitedCode->customer_id = $customer->id;
+        $invitedCode->status = InvitedCode::STATUS_CREATE;
+        $invitedCode->save();
+
+        try {
+            Mail::to($customer->email)->send(new SendInvitedCode($invitedCode));
+        } catch (\Exception $e) {
+            throw $e;
+        }
+
+        $invitedCode->status = InvitedCode::STATUS_SENT;
+        $invitedCode->sent_at = now();
+        $invitedCode->expired_by = Carbon::now()->addDays(config('app.request_access_invited_code_expired_dates'));
+        $invitedCode->save();
+
+        return $invitedCode;
+    }
 }

@@ -254,7 +254,7 @@
                                         <br>
                                         <p>Hi {{$invitedCode->customer->first_name ?? ''}},</p>
                                         <br>
-                                        <p>You've been invited to join Voice ! Let's take social back from Big Tech and create social as it should be, together.  </p>
+                                        <p>You've been invited to join UTU ! Let's take social back from Big Tech and create social as it should be, together.  </p>
                                         <br>
                                         <p>First, go ahead and copy your invitation code: </p>
                                         <br>
@@ -287,7 +287,7 @@
                                             </tbody>
                                         </table>
 
-                                        <p>After the app is installed on your device, click "I have my invite code" on the login page, or select "Get started" to create your Voice account below. </p>
+                                        <p>After the app is installed on your device, click "I have my invite code" on the login page, or select "Get started" to create your UTU account below. </p>
 
                                         <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                                             <tbody>
@@ -315,7 +315,7 @@
                                         </ul>
                                         <br>
                                         <p>
-                                            The email associated with your Voice account will be: {{$invitedCode->customer->email ?? ''}}.
+                                            The email associated with your UTU account will be: {{$invitedCode->customer->email ?? ''}}.
                                         </p>
                                         <br>
 

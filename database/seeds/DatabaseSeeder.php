@@ -44,5 +44,14 @@ class DatabaseSeeder extends Seeder
                 'password' => \Illuminate\Support\Facades\Hash::make(config('app.admin_login_init_password'))
             ]
         );
+        \App\User::firstOrCreate(
+            [
+                'email' => config('app.api_user_email'),
+            ],
+            [
+                'name' => 'utu developer',
+                'password' => \Illuminate\Support\Facades\Hash::make(config('app.api_user_password'))
+            ]
+        );
     }
 }
