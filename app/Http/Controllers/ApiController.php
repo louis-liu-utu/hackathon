@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Validator;
 class ApiController extends Controller
 {
     const STATUS_OK = 200;
-    const STATUS_ERR = 0;
+    const STATUS_ERR = 400;
+    const STATUS_AUTH_ERR = 401;
     protected $invitedCodeService;
 
 
@@ -22,14 +23,14 @@ class ApiController extends Controller
     }
 
     public function checkInvitedCode(Request $request) {
-       $validator = $this->validateInvitedCode($request);
+        $result = $this->validateAuth($request);
+        if($result['code'] !== self::STATUS_OK) {
+            return response()->json($result);
+        }
 
-        if($validator->fails()) {
-            return response()->json([
-                'code' => self::STATUS_ERR,
-                'message' => $validator->errors()->first(),
-                'data' => $request->invitedCode
-            ]);
+        $result = $this->validateInvitedCode($request);
+        if($result['code'] !== self::STATUS_OK) {
+            return response()->json($result);
         }
 
        if(!$this->invitedCodeService->checkAndSetIfCodeExpired($request->invitedCode)) {
@@ -48,14 +49,14 @@ class ApiController extends Controller
     }
 
     public function setInvitedCodeUsed(Request $request) {
-        $validator = $this->validateInvitedCode($request);
+        $result = $this->validateAuth($request);
+        if($result['code'] !== self::STATUS_OK) {
+            return response()->json($result);
+        }
 
-        if($validator->fails()) {
-            return response()->json([
-                'code' => self::STATUS_ERR,
-                'message' => $validator->errors()->first(),
-                'data' => $request->invitedCode
-            ]);
+        $result = $this->validateInvitedCode($request);
+        if($result['code'] !== self::STATUS_OK) {
+            return response()->json($result);
         }
 
         if(!$this->invitedCodeService->setCodeUsed($request->invitedCode)) {
@@ -74,30 +75,13 @@ class ApiController extends Controller
     }
 
     public function generateInvitedCode(Request $request) {
-        $validator = Validator::make($request->all(),
-            [
-                'username' => 'required|exists:users,email',
-                'password' => ['required', new ValidatePassword($request->username)],
-                'email' => 'required|email',
-                'first_name' => 'required',
-                'last_name' => 'required'
-            ],
-            [
-                'username.required' => 'username is required',
-                'password.required' => 'password is required',
-                'username.exists' => 'username is not existed',
-                'first_name.required' => 'first name is required',
-                'last_name.required' => 'last name is required',
-                'email.required' => 'email is required',
-                'email.email' => 'email format is invalid'
-            ]);
-
-        if($validator->fails()) {
-            return response()->json([
-                'code' => self::STATUS_ERR,
-                'message' => $validator->errors()->first(),
-                'data' => ''
-            ]);
+        $result = $this->validateAuth($request);
+        if($result['code'] !== self::STATUS_OK) {
+            return response()->json($result);
+        }
+        $result = $this->validateCustomerInfo($request);
+        if($result['code'] !== self::STATUS_OK) {
+            return response()->json($result);
         }
 
         try {
@@ -110,7 +94,7 @@ class ApiController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'code' => self::STATUS_ERR,
-                'message' => 'fail to send email',
+                'message' => $e->getMessage(),
                 'data' => ''
             ]);
         }
@@ -119,17 +103,80 @@ class ApiController extends Controller
     private function validateInvitedCode($request) {
         $validator = Validator::make($request->all(),
             [
+                'invitedCode' => ['required', new ValidateInvitedCodeVerified($request->invitedCode)]
+            ],
+            [
+                'invitedCode.required' => 'invited code is required',
+            ]);
+
+        if($validator->fails()) {
+            return [
+                'code' => self::STATUS_ERR,
+                'message' => $validator->errors()->first(),
+                'data' => ''
+            ];
+        }
+
+        return [
+            'code' => self::STATUS_OK,
+            'message' => '',
+            'data' => ''
+        ];
+    }
+
+    private function validateAuth($request) {
+        $validator = Validator::make($request->all(),
+            [
                 'username' => 'required|exists:users,email',
                 'password' => ['required', new ValidatePassword($request->username)],
-                'invitedCode' => ['required', new ValidateInvitedCodeVerified($request->invitedCode)]
             ],
             [
                 'username.required' => 'username is required',
                 'password.required' => 'password is required',
-                'invitedCode.required' => 'invited code is required',
                 'username.exists' => 'username is not existed',
             ]);
 
-       return $validator;
+        if($validator->fails()) {
+            return [
+                'code' => self::STATUS_AUTH_ERR,
+                'message' => $validator->errors()->first(),
+                'data' => ''
+            ];
+        }
+
+        return [
+            'code' => self::STATUS_OK,
+            'message' => '',
+            'data' => ''
+        ];
+    }
+
+    private function validateCustomerInfo($request) {
+        $validator = Validator::make($request->all(),
+            [
+                'email' => 'required|email',
+                'first_name' => 'required',
+                'last_name' => 'required'
+            ],
+            [
+                'first_name.required' => 'first name is required',
+                'last_name.required' => 'last name is required',
+                'email.required' => 'email is required',
+                'email.email' => 'email format is invalid'
+            ]);
+
+        if($validator->fails()) {
+            return [
+                'code' => self::STATUS_ERR,
+                'message' => $validator->errors()->first(),
+                'data' => ''
+            ];
+        }
+
+        return [
+            'code' => self::STATUS_OK,
+            'message' => '',
+            'data' => ''
+        ];
     }
 }
