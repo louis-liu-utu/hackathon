@@ -82,13 +82,13 @@
 
             EOSIO open source blockchain infrastructure and
             <br>
-            smart contract provide transparency and trust
+            smart contract provide transparency and trust.
             <br>
-            No shady algorithm and misleading information
+            No shady algorithm and misleading information.
             <br>
-            No profit driven manipulation news feed
+            No profit driven manipulation news feed.
             <br>
-            UTU gives control back to users and community
+            UTU gives control back to users and community.
         </p>
     </div>
 </section>
