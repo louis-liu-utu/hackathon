@@ -22,6 +22,11 @@ class ApiController extends Controller
         $this->invitedCodeService = $invitedCodeService;
     }
 
+    /**
+     * api/check_invited_code
+     * post
+     * username=**,password=**,invitedCode=**
+     */
     public function checkInvitedCode(Request $request) {
         $result = $this->validateAuth($request);
         if($result['code'] !== self::STATUS_OK) {
@@ -48,6 +53,11 @@ class ApiController extends Controller
         ]);
     }
 
+    /**
+     * api/set_invited_code_used
+     * post
+     * username=**,password=**,invitedCode=**
+     */
     public function setInvitedCodeUsed(Request $request) {
         $result = $this->validateAuth($request);
         if($result['code'] !== self::STATUS_OK) {
@@ -74,6 +84,11 @@ class ApiController extends Controller
         ]);
     }
 
+    /**
+     * api/generate_invited_code
+     * post
+     * username=**,password=**,email=**,first_name=**,last_name=**
+     */
     public function generateInvitedCode(Request $request) {
         $result = $this->validateAuth($request);
         if($result['code'] !== self::STATUS_OK) {
