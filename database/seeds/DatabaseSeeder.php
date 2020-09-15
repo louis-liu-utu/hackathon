@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Louis Liu',
-                'password' => \Illuminate\Support\Facades\Hash::make('ZbDIJovlyscFvjBZBSD7hiX/xjwkDfK4ZRv6x9')
+                'password' => \Illuminate\Support\Facades\Hash::make(config('app.admin_login_init_password'))
             ]
         );
 
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'utu admin',
-                'password' => \Illuminate\Support\Facades\Hash::make('ZbDIJovlyscFvjBZBSD7hiX/xjwkDfK4ZRv6x9')
+                'password' => \Illuminate\Support\Facades\Hash::make(config('app.admin_login_init_password'))
             ]
         );
 
@@ -41,7 +41,16 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'utu admin',
-                'password' => \Illuminate\Support\Facades\Hash::make('ZbDIJovlyscFvjBZBSD7hiX/xjwkDfK4ZRv6x9')
+                'password' => \Illuminate\Support\Facades\Hash::make(config('app.admin_login_init_password'))
+            ]
+        );
+        \App\User::firstOrCreate(
+            [
+                'email' => config('app.api_user_email'),
+            ],
+            [
+                'name' => 'utu developer',
+                'password' => \Illuminate\Support\Facades\Hash::make(config('app.api_user_password'))
             ]
         );
     }

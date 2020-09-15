@@ -4930,28 +4930,28 @@ body {
 
 .footer .container h3 {
   font-size: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   font-weight: 500;
 }
 
 @media (max-width: 1920px) {
   .footer .container h3 {
     font-size: 22px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 1200px) {
   .footer .container h3 {
     font-size: 18px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 576px) {
   .footer .container h3 {
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 

@@ -58,16 +58,14 @@
             <h2 class="home3-title">for real people</h2>
             <h2 class="home3-title"> ONLY</h2>
             <div class="home3-img">
-                <img src="{{url('/images/home3-phone.png')}}" alt="utu social platform real people">
+                <img src="{{url('/images/home3-phone.png?v=1')}}" alt="utu social platform real people">
             </div>
             <div class="home3-txt">
                 <ul>
-                    <li>360 bio verification</li>
-                    <li>One account per person</li>
-                    <li>no bot or fake account</li>
-                    <li>Decentralised Identity provide security,</li>
-                    <li>transparency and trust</li>
-                    <li>that weren’t possible before.</li>
+                    <li>360 bio verification,one account per person</li>
+                    <li>no bot or fake account.Decentralised Identity</li>
+                    <li>provide security,transparency and trust that</li>
+                    <li>weren’t possible before.</li>
                 </ul>
             </div>
 
@@ -82,8 +80,9 @@
         </h1>
         <p class="home2-txt">
 
-            EOSIO open source blockchain infrastructure
-            and smart contract provide transparency and trust
+            EOSIO open source blockchain infrastructure and
+            <br>
+            smart contract provide transparency and trust
             <br>
             No shady algorithm and misleading information
             <br>
@@ -140,7 +139,7 @@
                 <div class="home4-item-list home4-item-reverse home4-item-list-bottom">
                     <i class="circle circle-yellow"></i>
                     <p class="home4-item-txt">
-                        Chat,Voice & Video
+                        Chat, Voice & Video
                     </p>
                 </div>
             </div>
@@ -222,12 +221,12 @@
                     <li>Referendum & Vote</li>
                     <li>Prediction</li>
                     <li>Tasks</li>
-                    <li>And third party application</li>
+                    <li>Third party application</li>
                 </ul>
             </div>
             <div class="col-sm-7">
                 <div class="home7-img">
-                    <img src="{{url('images/home7-phone.png')}}" alt="utu Decentralised Autonomous Community and token">
+                    <img src="{{url('images/home7-phone.png?v=1')}}" alt="utu Decentralised Autonomous Community and token">
                 </div>
             </div>
         </div>

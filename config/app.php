@@ -228,5 +228,11 @@ return [
 
     ],
 
-    'admin_notified_mail' => env('ADMIN_NOTIFIED_MAIL','ouis@utu.one')
+    'admin_notified_mail' => env('ADMIN_NOTIFIED_MAIL','ouis@utu.one'),
+    'request_access_invited_code_expired_dates' => env('REQUEST_ACCESS_INVITED_CODE_EXPIRED_DATES',30),
+    'app_google_store_download_link' => env('APP_GOOGLE_STORE_DOWNLOAD_LINK'),
+    'app_apple_store_download_link' => env('APP_APPLLE_STORE_DOWNLOAD_LINK'),
+    'admin_login_init_password' => env('ADMIN_LOGIN_INIT_PASSWORD'),
+    'api_user_email' => env('API_USER_EMAIL'),
+    'api_user_password' => env('API_USER_PASSWORD')
 ];

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Customer;
 use App\Http\Requests\CreateCustomer;
+use App\Http\Services\InvitedCodeService;
+use App\InvitedCode;
 use App\Mail\AdminNotify;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -27,8 +29,24 @@ class CustomerController extends Controller
         }
     }
 
-    public function show($id) {
+    public function show($id, Request $request, InvitedCodeService $invitedCodeService) {
         $customer = Customer::findOrFail($id);
-        return view('admin.customers.edit', compact('customer'));
+        $invitedCodes = InvitedCode::where('customer_id', $id)->get();
+        $generatedInvitedCode = null;
+
+        if($request->has('action')) {
+            if($request->action === 'generate') {
+                $generatedInvitedCode = $invitedCodeService->generateInvitedCode($id);
+                return redirect()->back()->with(compact('generatedInvitedCode'));
+            }
+            if($request->action === 'send') {
+                $result = $invitedCodeService->sendInvitedCode($id);
+                return redirect()->back()->with(compact('result'));
+            }
+        }
+
+
+        return view('admin.customers.edit', compact('customer', 'invitedCodes','generatedInvitedCode'));
     }
+
 }

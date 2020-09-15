@@ -71,7 +71,11 @@ Route::group(['prefix' => '/admin'], function ($router) {
     Route::group(['middleware' => 'auth'], function ($router) {
         Route::get('/customers','CustomerController@index');
         Route::get('/customers/{id}','CustomerController@show');
+        Route::post('/customers/{id}/generate_code','CustomerController@show');
+        Route::post('/customers/{id}/send_code','CustomerController@show');
+
         Route::delete('/customers/{id}','CustomerController@destory');
+
 
         Route::get('/contacts','ContactController@index');
         Route::get('/contacts/{id}','ContactController@show');
@@ -94,5 +98,7 @@ Route::group(['prefix' => '/admin'], function ($router) {
 Route::get('/admin', 'AdminController@index')->name('admin');
 
 
-
+Route::get('/test-mail', function () {
+    return view('mails.invited_code');
+});
 //Auth::routes(['register' => false]);

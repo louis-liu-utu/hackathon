@@ -4928,28 +4928,28 @@ body {
 
 .footer .container h3 {
   font-size: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   font-weight: 500;
 }
 
 @media (max-width: 1920px) {
   .footer .container h3 {
     font-size: 22px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 1200px) {
   .footer .container h3 {
     font-size: 18px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 576px) {
   .footer .container h3 {
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
@@ -5261,6 +5261,7 @@ body {
   background: url("/images/home-1.png");
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: -2px;
 }
 
 @media (max-width: 992px) {
@@ -5825,8 +5826,8 @@ body {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.19;
-  letter-spacing: 1.49px;
+  line-height: 1.03;
+  letter-spacing: 1.09px;
   text-align: center;
   max-width: 1300px;
 }
@@ -5904,6 +5905,34 @@ body {
   }
 }
 
+.home4 .home4-list .home4-item .home4-item-reverse .circle-grey {
+  margin-right: 40px;
+}
+
+@media (max-width: 1920px) {
+  .home4 .home4-list .home4-item .home4-item-reverse .circle-grey {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .home4 .home4-list .home4-item .home4-item-reverse .circle-grey {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 769px) {
+  .home4 .home4-list .home4-item .home4-item-reverse .circle-grey {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .home4 .home4-list .home4-item .home4-item-reverse .circle-grey {
+    margin-right: 5px;
+  }
+}
+
 .home4 .home4-list .home4-item-list-column {
   flex-direction: column;
 }
@@ -5920,7 +5949,7 @@ body {
 
 @media (max-width: 1200px) {
   .home4 .home4-list .home4-item-list-column .home4-item-list-bottom {
-    margin-bottom: 150px;
+    margin-bottom: 120px;
   }
 }
 
@@ -6102,8 +6131,8 @@ body {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.21;
-  letter-spacing: 1.49px;
+  line-height: 1.03;
+  letter-spacing: 1.09px;
 }
 
 @media (max-width: 1920px) {
@@ -6167,8 +6196,8 @@ body {
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.67;
-  letter-spacing: 0.42px;
+  line-height: 1.52;
+  letter-spacing: 0.33px;
 }
 
 @media (max-width: 1920px) {
@@ -6239,27 +6268,27 @@ body {
 
 .home5 .container .home5-list .home5-txt .icons-list .iconfont {
   margin-left: 130px;
-  font-size: 42px;
+  font-size: 50px;
 }
 
 @media (max-width: 1920px) {
   .home5 .container .home5-list .home5-txt .icons-list .iconfont {
     margin-left: 80px;
-    font-size: 24px;
+    font-size: 30px;
   }
 }
 
 @media (max-width: 1200px) {
   .home5 .container .home5-list .home5-txt .icons-list .iconfont {
     margin-left: 60px;
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 
 @media (max-width: 769px) {
   .home5 .container .home5-list .home5-txt .icons-list .iconfont {
     margin-left: 50px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
   }
 }
@@ -6388,7 +6417,7 @@ body {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 2.36;
+  line-height: 1.8;
   letter-spacing: 0.64px;
 }
 
@@ -6457,7 +6486,7 @@ body {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: 1.73px;
 }
 
@@ -6536,7 +6565,7 @@ body {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.19;
+  line-height: 1.03;
   letter-spacing: 1.59px;
 }
 
