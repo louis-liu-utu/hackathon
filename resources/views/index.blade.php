@@ -112,7 +112,7 @@
                     <i class="circle  circle-light-blue"></i>
                     <p class="home4-item-txt">
                         <span class="br">Create a group chat</span>
-                        up-to 5000 members
+                        up to 5000 members
                     </p>
                 </div>
                 <div class="home4-item-list">
