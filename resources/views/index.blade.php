@@ -62,9 +62,9 @@
             </div>
             <div class="home3-txt">
                 <ul>
-                    <li>360 bio verification,one account per person</li>
-                    <li>no bot or fake account.Decentralised Identity</li>
-                    <li>provide security,transparency and trust that</li>
+                    <li>360 bio verification, one account per person</li>
+                    <li>no bot or fake account. Decentralised Identity</li>
+                    <li>provide security, transparency and trust that</li>
                     <li>weren’t possible before.</li>
                 </ul>
             </div>
@@ -111,7 +111,7 @@
                 <div class="home4-item-list home4-item-list-bottom">
                     <i class="circle  circle-light-blue"></i>
                     <p class="home4-item-txt">
-                        Create a group chat
+                        <span class="br">Create a group chat</span>
                         up-to 5000 members
                     </p>
                 </div>
