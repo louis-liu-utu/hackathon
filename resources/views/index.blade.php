@@ -80,8 +80,9 @@
         </h1>
         <p class="home2-txt">
 
-            EOSIO open source blockchain infrastructure
-            and smart contract provide transparency and trust
+            EOSIO open source blockchain infrastructure and
+            <br>
+            smart contract provide transparency and trust
             <br>
             No shady algorithm and misleading information
             <br>
