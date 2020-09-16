@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "utu-traffic",
+  "private_key_id": "85d5429dea3f4bbbd1c04a1020e61d240a2570fe",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC1ZKEmzU4sQ3Ev\ne86EdBU4ETNoq+AbEsGw54BNGoZRI8MmpMeA8WqNFaXIxAmWk70jwhubC+mFaim/\nbyplX1FRhyiYIYhrZlWKFTR5KC0vArWKb4OIlhiOWheBAtGENEna3742kc4hGGWy\ns7FJGWy1jcrDppdVNlhj+dcA60kMwTus8IfVBPvJGEy1E7mw2jgooJsb0kGN6uC3\n8Xu8vvjk5YsYybSusc2p59fkKKR+4Yy+SyAcypJKa1NKU+bHy6PopFYu2rX694fG\nCoA4IEXcKosZj5udATMuMQkcZ98thHBweOMql7ZmnXY2+qx79HAOlp45pjRgP2vm\n27qnonuVAgMBAAECggEAF9yjQ2y2GCYOFWpCvlNb+DpxChe0HTOgNcKacuommbVr\n5mE+WmTHuMQMgUbioQOR2cqe4YxVXabb05JO4DOECcbPLQYaQVCet5G3C6ogmYLQ\neWPWiIkANXe+CEtj3vGW9ptA1UJkfJ+OP04aqAxXa+G5dvfrB/tkcNBsu3L4Mtxe\nlMHOfJWI49ICWtpXnCs+Gx51TYHVA4Zptr1cPDZpiWM+Zh++0GppsoCSY9kDjmVR\niIQDj+BsKwcMblAnFfSU4w+agmAaR9wSpJAIZ3a6HYtz+KePtHiOv5JHvaZoJ1LP\ncrquONr8O8x+SCFsfiRyJUnp5jvSVybIygDJ2iVtyQKBgQDv6HXhnmLmfcG8wg4I\nomZiRex0FuQ7qw58eurkQnxmyrVxKrevYDNMPh6unLLw9fr8QCcD/da7k+jw8aLe\nGHqb6GVmEiYle67y4h8UGJ3LvO4wOrWFHz4rJnWJhwvNOHgipmdbx29Da/6Iy0Ml\nXWG+9RnDXKO8WtDIkvBQ5P72XQKBgQDBj2OyKT2P5eJIVNBVHakETxXNvryFuS/8\n9TdC0zYwNPavzMOjPLcsX1BPQLjZkXEAEriqvqmaKw89PYqPkwkOuPF4sM0aGcOL\nb6eaIldwyFdpx/qk5y7OkX9IzMljJDIl9+mMF8BNTbpPdaDtTVubsMrGJbdoTnI5\nrsBeUpZWmQKBgBJdkFCiSF3uuJsTm/FrRT02ryA/9F7g/G3pFvw8XrubvwIXzBH/\n4k1u3/hsBILPwdP3sUTr9LlNXGK9jMNFynUO+Fw0/XiXHFB5oPlv3PyQzQciJ202\ndBLnkc3iabPfI8s7Q+RRwyG9LbIZJV3B5U6yArPi7qHnrd386aq3rRD9AoGBAKn0\nBU3B+FQJPY7VKbgSuv0Vk8d72nxwBjrN9R+v5LyfRJtH59/Ex/EmH5X29lfS5K1z\nwsHpd3HurQrQpoE6UZGjwiJ+2xg31wLvnvIvhSd6QYaYGPQCKY8nIeQCLDHo7j94\nVpCzqh42SYjLd+nlKrKhoOoq48eqWZFcZ3xqd6bBAoGAT4BM/j0Dr7glTTkEawGA\nnOGlziWviVe0SoQwn+vCsLUEZT4JwUlgKWURHTEDsZIoFR5jCh6RIcYdX/QEj6Pg\n45pH0C01YtT767ZgoJSZLOzQk9ueFmToBmjiFKxo/iUCU3KT/3YHexzpwM0vOpKp\nZrlvXo4Mo2KGXHsjGgArs5o=\n-----END PRIVATE KEY-----\n",
+  "client_email": "utu-traffice@utu-traffic.iam.gserviceaccount.com",
+  "client_id": "112592647776395134618",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/utu-traffice%40utu-traffic.iam.gserviceaccount.com"
+}
