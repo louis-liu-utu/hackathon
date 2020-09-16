@@ -32,9 +32,13 @@ class AdminController extends Controller
             return date( 'm/d',strtotime($customer->date));
         })->toJson();
 
-        $series = $customers->map(function ($customer) {
+        $seriesC = $customers->map(function ($customer) {
             return $customer->count;
-        })->toJson();
+        });
+        $series = $seriesC->toJson();
+        $seriesSorted = $seriesC->sort();
+        $serieSmallest = round($seriesSorted->first() * 0.5);
+        $serieBiggest = round($seriesSorted->last() * 1.2);
 
         $analyticsData = Analytics::fetchTotalVisitorsAndPageViews(Period::days(365));
 
@@ -42,16 +46,29 @@ class AdminController extends Controller
         $analyticsLabels = [];
         $analyticsSeriesPageViews = [];
         $analyticsSeriesvisitors= [];
+        $analyticsSerieSmallest = 100000000;
+        $analyticsSerieBiggest = 0;
+
         foreach ($analyticsData as $analyticsRow) {
             if($analyticsRow['pageViews'] || $analyticsRow['visitors']) {
                 $analyticsLabels[] = $analyticsRow['date']->format('m/d');
                 $analyticsSeriesPageViews[] = $analyticsRow['pageViews'];
                 $analyticsSeriesvisitors[] = $analyticsRow['visitors'];
+                if($analyticsRow['visitors'] < $analyticsSerieSmallest) $analyticsSerieSmallest = $analyticsRow['visitors'];
+                if($analyticsRow['pageViews'] > $analyticsSerieBiggest) $analyticsSerieBiggest = $analyticsRow['pageViews'];
             }
+        }
+        if($analyticsSerieBiggest !== 0) {
+            $analyticsSerieBiggest = round($analyticsSerieBiggest * 1.2);
+            $analyticsSerieSmallest = round($analyticsSerieSmallest * 0.5);
+        } else {
+            $analyticsSerieSmallest = 0;
+            $analyticsSerieBiggest = 100;
         }
         $analyticsLabels = json_encode($analyticsLabels);
         $analyticsSeries = json_encode([$analyticsSeriesPageViews,$analyticsSeriesvisitors]);
-        return view('admin.dashboard',compact('labels','series','analyticsLabels','analyticsSeries'));
+        return view('admin.dashboard',compact('labels','series','analyticsLabels','analyticsSeries',
+        'serieSmallest','serieBiggest','analyticsSerieSmallest','analyticsSerieBiggest'));
     }
 
 

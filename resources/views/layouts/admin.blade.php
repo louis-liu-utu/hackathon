@@ -309,7 +309,9 @@
 
             });
 
-            $('#myTable').DataTable();
+            $('#myTable').DataTable({
+                "ordering": false
+            });
 
         });
     });

@@ -24,7 +24,7 @@
                          </div>--}}
                      </div>
                      <div class="home1-txt-title-img">
-                         <img src="{{url('/images/home-phone1.png?v=2')}}" alt="utu social platform">
+                         <img src="{{url('/images/home-phone1.png?v=3')}}" alt="utu social platform">
                      </div>
                      <h1 class="home1-txt-title2">
                          social
@@ -226,7 +226,7 @@
             </div>
             <div class="col-sm-7">
                 <div class="home7-img">
-                    <img src="{{url('images/home7-phone.png?v=1')}}" alt="utu Decentralised Autonomous Community and token">
+                    <img src="{{url('images/home7-phone.png?v=2')}}" alt="utu Decentralised Autonomous Community and token">
                 </div>
             </div>
         </div>
