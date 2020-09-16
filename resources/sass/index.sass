@@ -33,6 +33,10 @@
         background-color: $circle-dark-blue
     &.circle-light-blue
         background-color: $circle-light-blue
+.br
+    display: block
+    @media (max-width: 576px)
+        display: inline
 
 .header
     position: absolute
@@ -423,10 +427,7 @@
                     text-align: left
                     font-weight: 500
                     letter-spacing: 0
-                .br
-                    display: block
-                    @media (max-width: 576px)
-                        display: inline
+
         .home4-item-img
             flex-direction: column
             @media (max-width: 576px)
