@@ -31,7 +31,6 @@ class CustomerController extends Controller
 
     public function show($id, Request $request, InvitedCodeService $invitedCodeService) {
         $customer = Customer::findOrFail($id);
-        $invitedCodes = InvitedCode::where('customer_id', $id)->get();
         $generatedInvitedCode = null;
 
         if($request->has('action')) {
@@ -46,7 +45,7 @@ class CustomerController extends Controller
         }
 
 
-        return view('admin.customers.edit', compact('customer', 'invitedCodes','generatedInvitedCode'));
+        return view('admin.customers.edit', compact('customer','generatedInvitedCode'));
     }
 
 }

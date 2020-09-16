@@ -83,7 +83,7 @@
                                                     </thead>
                                                     <tbody>
 
-                                                    @forelse($invitedCodes as $invitedCode)
+                                                    @forelse($customer->invitedCodes as $invitedCode)
                                                         <tr>
                                                             <td>
                                                                 {{$invitedCode->code}}

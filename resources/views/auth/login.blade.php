@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('google-analytics')
+    <meta name="robots" content="noindex">
+@endsection
+
+
 @section('content')
 
 <section class="signup container">

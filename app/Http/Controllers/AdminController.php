@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Customer;
 use Illuminate\Http\Request;
+use Analytics;
+use Spatie\Analytics\Period;
 
 class AdminController extends Controller
 {
@@ -24,7 +26,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-       $customers = Customer::lastLatestMonth()->countByDate()->get();
+       $customers = Customer::lastYear()->countByDate()->get();
 
         $labels = $customers->map(function ($customer) {
             return date( 'm/d',strtotime($customer->date));
@@ -34,21 +36,22 @@ class AdminController extends Controller
             return $customer->count;
         })->toJson();
 
-        /*
-        $labels = [];
-        $index = 0;
-        foreach ($customers as $customer) {
-            $date = date('m/d',strtotime($customer->created_at));
-            if(!in_array($date, $labels)) {
-                $labels[$index] = $date;
-                $series[$index] = 1;
-            } else {
-                $series[$index]++;
+        $analyticsData = Analytics::fetchTotalVisitorsAndPageViews(Period::days(365));
 
+
+        $analyticsLabels = [];
+        $analyticsSeriesPageViews = [];
+        $analyticsSeriesvisitors= [];
+        foreach ($analyticsData as $analyticsRow) {
+            if($analyticsRow['pageViews'] || $analyticsRow['visitors']) {
+                $analyticsLabels[] = $analyticsRow['date']->format('m/d');
+                $analyticsSeriesPageViews[] = $analyticsRow['pageViews'];
+                $analyticsSeriesvisitors[] = $analyticsRow['visitors'];
             }
-        }*/
-
-        return view('admin.dashboard',compact('labels','series'));
+        }
+        $analyticsLabels = json_encode($analyticsLabels);
+        $analyticsSeries = json_encode([$analyticsSeriesPageViews,$analyticsSeriesvisitors]);
+        return view('admin.dashboard',compact('labels','series','analyticsLabels','analyticsSeries'));
     }
 
 
