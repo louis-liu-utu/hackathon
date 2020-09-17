@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
+use App\BlogType;
+use App\Topic;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,10 +15,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->createAdminAccount();
+        $this->createBlogTypes();
+        $this->createBlogTopcs();
     }
 
     private function createAdminAccount() {
-        \App\User::firstOrCreate(
+        User::firstOrCreate(
             [
                 'email' => 'louis@utu.com',
             ],
@@ -25,7 +30,7 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        \App\User::firstOrCreate(
+        User::firstOrCreate(
             [
                 'email' => 'admin@utu.com',
             ],
@@ -35,7 +40,7 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        \App\User::firstOrCreate(
+        User::firstOrCreate(
             [
                 'email' => 'admin@utu.one',
             ],
@@ -44,7 +49,7 @@ class DatabaseSeeder extends Seeder
                 'password' => \Illuminate\Support\Facades\Hash::make(config('app.admin_login_init_password'))
             ]
         );
-        \App\User::firstOrCreate(
+        User::firstOrCreate(
             [
                 'email' => config('app.api_user_email'),
             ],
@@ -54,4 +59,39 @@ class DatabaseSeeder extends Seeder
             ]
         );
     }
+
+    private function createBlogTypes() {
+        BlogType::firstOrCreate([
+            'name' => 'Press Release',
+        ]);
+        BlogType::firstOrCreate([
+            'name' => 'Announcement',
+        ]);
+        BlogType::firstOrCreate([
+            'name' => 'Statement',
+        ]);
+        BlogType::firstOrCreate([
+            'name' => 'Insights'
+        ]);
+
+    }
+
+    private function createBlogTopcs() {
+        Topic::firstOrCreate([
+            'name' => 'Block Producers',
+        ]);
+        Topic::firstOrCreate([
+            'name' => ' Blockchain Technology',
+        ]);
+        Topic::firstOrCreate([
+            'name' => 'Utn.one',
+        ]);
+        Topic::firstOrCreate([
+            'name' => 'Cryptocurrency',
+        ]);
+        Topic::firstOrCreate([
+            'name' => ' Decentralization',
+        ]);
+    }
+
 }

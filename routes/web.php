@@ -79,9 +79,11 @@ Route::group(['prefix' => '/admin'], function ($router) {
 
         Route::get('/contacts','ContactController@index');
         Route::get('/contacts/{id}','ContactController@show');
-        Route::delete('/contacts/{id}','ContactController@destory');
+        Route::delete('/contacts/{id}','ContactController@destroy');
 
         Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+
+        Route::resource('/blogs','BlogController');
     });
 
     //admin user
@@ -92,6 +94,10 @@ Route::group(['prefix' => '/admin'], function ($router) {
     Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
+});
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
 

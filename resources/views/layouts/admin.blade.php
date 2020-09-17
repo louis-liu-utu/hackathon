@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
-    <link href="{{url('/assets/css/material-dashboard.css?v=2.1.2')}}" rel="stylesheet" />
+    <link href="{{url('/assets/css/material-dashboard.css?v=2.1')}}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{url('/assets/demo/demo.css')}}" rel="stylesheet" />
 </head>
@@ -130,16 +130,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 <!-- Library for adding dinamically elements -->
 <script src="{{url('/assets/js/plugins/arrive.min.js')}}"></script>
-<!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
 <!-- Chartist JS -->
 <script src="{{url('/assets/js/plugins/chartist.min.js')}}"></script>
 <!--  Notifications Plugin    -->
 <script src="{{url('/assets/js/plugins/bootstrap-notify.js')}}"></script>
+
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{url('/assets/js/material-dashboard.js?v=2.1.2')}}" type="text/javascript"></script>
-<!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="{{url('/assets/demo/demo.js')}}"></script>
+
 <script>
     $(document).ready(function() {
         $().ready(function() {
