@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'social platform | blockchain token | real people only | benefit members')
+@section('title', 'redefine social platform | blockchain token | real people only | benefit members')
 
-@section('description', 'UTU is a social platform built on blockchain,for real people only and benefit members')
+@section('description', 'UTU is a social platform built on blockchain, for real people only and benefit members')
 
 @section('style')
     <link rel="stylesheet" href="{{mix('css/index.css')}}">
