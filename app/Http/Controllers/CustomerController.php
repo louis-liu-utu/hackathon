@@ -8,6 +8,7 @@ use App\Http\Services\InvitedCodeService;
 use App\InvitedCode;
 use App\Mail\AdminNotify;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class CustomerController extends Controller
@@ -22,7 +23,11 @@ class CustomerController extends Controller
         $inputData['ip'] = $request->ip();
 
         if($customer = Customer::create($inputData)) {
-            Mail::to(config('app.admin_notified_mail'))->send(new AdminNotify($customer));
+            try {
+                Mail::to(config('app.admin_notified_mail'))->send(new AdminNotify($customer));
+            } catch (\Exception $exception) {
+                Log::channel('mail')->error($exception->getMessage());
+            }
             return redirect()->to('get-started-message');
         } else {
             return redirect()->back();
