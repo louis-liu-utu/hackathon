@@ -50,7 +50,7 @@
                                                 {{$blog->type->name}}
                                             </td>
                                             <td >
-                                                {{$blog->topicNames}}
+                                                {{$blog->topics->implode('name',',')}}
                                             </td>
                                             <td >
 

@@ -22,7 +22,7 @@ class BlogService
             $image->resize(700, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save($path.'/'.$thumbnailFileName);
-            $request->thumbnail->storeAs($path,$fileName);
+            $request->thumbnail->move($path, $fileName);
             return $thumbnailFileName;
         }
         return "";
@@ -32,7 +32,9 @@ class BlogService
         try {
             $blog = Blog::create($request->except('thumbnail'));
             $blog->thumbnail = $this->uploadThumbnail($request);
+            $blog->lb_content = $request->lb_content;
             $blog->save();
+
             $blog->topics()->sync($request->topics);
             return $blog;
         } catch (QueryException $e) {

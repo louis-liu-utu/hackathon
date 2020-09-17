@@ -9,6 +9,8 @@ class Blog extends Model
 {
     use Gutenbergable;
 
+    const Default_Thumbnail = "images/blog-1400x800.jpg";
+
     protected $fillable = [
         'title',
         'slug',
@@ -25,13 +27,8 @@ class Blog extends Model
         return $this->belongsToMany('App\Topic','blogs_topics','blog_id','topic_id');
     }
 
-    public function topicNames() {
-        $topics = $this->topics()->get('name');
-        return $topics->implode('name',',');
-    }
-
     public function type() {
-        return $this->belongsTo('App\Topic','id','type_id');
+        return $this->belongsTo('App\BlogType','type_id');
     }
 
     public function scopePriority($query) {
@@ -40,5 +37,19 @@ class Blog extends Model
 
     public function getStatus() {
         return $this->is_top ? 'top' : $this->is_active ? 'active' : 'inactive';
+    }
+
+    public function getThumbnailUrl() {
+        if(file_exists(public_path('/storage/blogs/'.$this->thumbnail))) {
+            return url('/storage/blogs/'.$this->thumbnail);
+        }
+        return url(self::Default_Thumbnail);
+    }
+
+    public function getOriginalImagelUrl() {
+        if(file_exists(public_path('/storage/blogs/'.ltrim($this->thumbnail,'t_')))) {
+            return url('/storage/blogs/'.ltrim($this->thumbnail,'t_'));
+        }
+        return url(self::Default_Thumbnail);
     }
 }
