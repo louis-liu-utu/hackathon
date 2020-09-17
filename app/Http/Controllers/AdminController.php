@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Analytics;
 use Spatie\Analytics\Period;
@@ -40,7 +41,8 @@ class AdminController extends Controller
         $serieSmallest = round($seriesSorted->first() * 0.5);
         $serieBiggest = round($seriesSorted->last() * 1.2);
 
-        $analyticsData = Analytics::fetchTotalVisitorsAndPageViews(Period::days(365));
+
+        $analyticsData = Analytics::fetchTotalVisitorsAndPageViews(Period::create(Carbon::now()->subDays(365),now()));
 
 
         $analyticsLabels = [];
