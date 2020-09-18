@@ -149,7 +149,7 @@
                                         <h1 class="title">Welcome to UTU</h1>
                                         <p>Hi {{$invitedCode->customer->first_name ?? ''}},</p>
                                         <br>
-                                        <p>You’ve been invited to join Voice! Let’s take social back from Big Tech and create social as it should be, together.  </p>
+                                        <p>You’ve been invited to join UTU! Let’s take social back from Big Tech and create social as it should be, together.  </p>
                                         <br>
                                         <p>First, go ahead and copy your invitation code: </p>
                                         <br>
@@ -196,7 +196,7 @@
                                         <p>UTU is a social platform built for real people, that means we work hard to ensure all accounts are created by people, and all people only create one account. Please do not attempt to create duplicate accounts, as we will be monitoring in the background and freezing users suspected of creating duplicate accounts.
                                         </p>
                                         <br>
-                                        <p>The email associated with your Voice account will be: {{$invitedCode->customer->email ?? ''}}.
+                                        <p>The email associated with your UTU account will be: {{$invitedCode->customer->email ?? ''}}.
                                         </p>
                                         <br>
                                         <br>

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateBlog extends FormRequest
+class BlogRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,10 +28,11 @@ class CreateBlog extends FormRequest
             'lb_content' => 'required',
             'thumbnail' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg',
             'type_id' => 'required',
-            'slug' => 'required|unique:blogs,slug',
-            'topics' => 'required',
+            'slug' => 'required|unique:blogs,slug,'.$this->id,
             'published_at' => 'required|date'
         ];
+
+
     }
 
     public function messages()
@@ -39,7 +40,6 @@ class CreateBlog extends FormRequest
         return [
             'title.required' => 'title is required',
             'slug.unique' => 'slug already exists, please re-edit',
-            'topics' => 'at least one topic is required'
         ];
     }
 }

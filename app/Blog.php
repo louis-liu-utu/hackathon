@@ -9,7 +9,7 @@ class Blog extends Model
 {
     use Gutenbergable;
 
-    const Default_Thumbnail = "images/blog-1400x800.jpg";
+    const Default_Thumbnail = "images/blog-default.jpg";
 
     protected $fillable = [
         'title',
@@ -32,7 +32,8 @@ class Blog extends Model
     }
 
     public function scopePriority($query) {
-        return $query->orderBy('is_top','desc')->orderBy('sort','desc');
+        //return $query->orderBy('is_top','desc')->orderBy('sort','desc');
+        return $query->orderBy('sort','desc');
     }
 
     public function getStatus() {

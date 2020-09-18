@@ -84,6 +84,12 @@ Route::group(['prefix' => '/admin'], function ($router) {
         Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
         Route::resource('/blogs','BlogController');
+        Route::get('/blogs-types','BlogController@types');
+        Route::get('/blogs-types/add','BlogController@addType');
+        Route::get('/blogs-types/{blogType}/update','BlogController@updateType');
+        Route::get('/blogs-types/{blogType}/delete','BlogController@deleteType');
+
+        Route::get('/blogs-sort','BlogController@ajaxSort');
     });
 
     //admin user
