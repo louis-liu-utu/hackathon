@@ -99,6 +99,6 @@ Route::get('/admin', 'AdminController@index')->name('admin');
 
 
 Route::get('/test-mail', function () {
-    return view('mails.request_access_success');
+    return view('mails.invited_code');
 });
 //Auth::routes(['register' => false]);

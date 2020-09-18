@@ -1,27 +1,7 @@
-<!doctype html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>UTU Email Notified</title>
+@extends('layouts.mail')
+
+@section('style')
     <style>
-        /* -------------------------------------
-            GLOBAL RESETS
-        ------------------------------------- */
-        img {
-            border: none;
-            -ms-interpolation-mode: bicubic;
-            max-width: 100%; }
-        body {
-            background-color: #f6f6f6;
-            font-family: sans-serif;
-            -webkit-font-smoothing: antialiased;
-            font-size: 14px;
-            line-height: 1.4;
-            margin: 0;
-            padding: 0;
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%; }
         table {
             border-collapse: separate;
             mso-table-lspace: 0pt;
@@ -34,153 +14,58 @@
         /* -------------------------------------
             BODY & CONTAINER
         ------------------------------------- */
-        .body {
-            background-color: #f6f6f6;
-            width: 100%; }
+
         /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
         .container {
             display: block;
             Margin: 0 auto !important;
             /* makes it centered */
-            max-width: 580px;
-            padding: 10px;
-            width: 580px; }
+            max-width: 750px;
+            width: 750px; }
         /* This should also be a block element, so that it will fill 100% of the .container */
         .content {
             box-sizing: border-box;
             display: block;
             Margin: 0 auto;
-            max-width: 580px;
+            max-width: 750px;
             padding: 10px; }
         /* -------------------------------------
             HEADER, FOOTER, MAIN
         ------------------------------------- */
         .main {
             background: #fff;
-            border-radius: 3px;
             width: 100%; }
+        .main .title {
+            text-align: left;
+            font-size: 44px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.25;
+            letter-spacing: 0.44px;
+        }
+        .main p {
+            font-size: 33px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.18;
+            letter-spacing: normal;
+            text-align: left;
+            color: #707070;
+        }
+        .main .code {
+            font-weight: 600;
+            color: #333;
+        }
+        .main .store {
+            padding: 30px;
+        }
         .wrapper {
             box-sizing: border-box;
-            padding: 20px; }
-        .footer {
-            clear: both;
-            padding-top: 10px;
-            text-align: center;
-            width: 100%; }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-            color: #999999;
-            font-size: 12px;
-            text-align: center; }
-        /* -------------------------------------
-            TYPOGRAPHY
-        ------------------------------------- */
-        h1,
-        h2,
-        h3,
-        h4 {
-            color: #000000;
-            font-family: sans-serif;
-            font-weight: 400;
-            line-height: 1.4;
-            margin: 0;
-            Margin-bottom: 30px; }
-        h1 {
-            font-size: 35px;
-            font-weight: 300;
-            text-align: center;
-            text-transform: capitalize; }
-        p,
-        ul,
-        ol {
-            font-family: sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            margin: 0;
-            Margin-bottom: 15px; }
-        p li,
-        ul li,
-        ol li {
-            list-style-position: inside;
-            margin-left: 5px; }
-        a {
-            color: #3498db;
-            text-decoration: underline; }
-        /* -------------------------------------
-            BUTTONS
-        ------------------------------------- */
-        .btn {
-            box-sizing: border-box;
-            width: 100%; }
-        .btn > tbody > tr > td {
-            padding-bottom: 15px; }
-        .btn table {
-            width: auto; }
-        .btn table td {
-            background-color: #ffffff;
-            border-radius: 5px;
-            text-align: center; }
-        .btn a {
-            background-color: #ffffff;
-            border: solid 1px #3498db;
-            border-radius: 5px;
-            box-sizing: border-box;
-            color: #3498db;
-            cursor: pointer;
-            display: inline-block;
-            font-size: 14px;
-            font-weight: bold;
-            margin: 0;
-            padding: 12px 25px;
-            text-decoration: none;
-            text-transform: capitalize; }
-        .btn-primary table td {
-            background-color: #3498db; }
-        .btn-primary a {
-            background-color: #3498db;
-            border-color: #3498db;
-            color: #ffffff; }
-        /* -------------------------------------
-            OTHER STYLES THAT MIGHT BE USEFUL
-        ------------------------------------- */
-        .last {
-            margin-bottom: 0; }
-        .first {
-            margin-top: 0; }
-        .align-center {
-            text-align: center; }
-        .align-right {
-            text-align: right; }
-        .align-left {
-            text-align: left; }
-        .clear {
-            clear: both; }
-        .mt0 {
-            margin-top: 0; }
-        .mb0 {
-            margin-bottom: 0; }
-        .preheader {
-            color: transparent;
-            display: none;
-            height: 0;
-            max-height: 0;
-            max-width: 0;
-            opacity: 0;
-            overflow: hidden;
-            mso-hide: all;
-            visibility: hidden;
-            width: 0; }
-        .powered-by a {
-            text-decoration: none; }
-        hr {
-            border: 0;
-            border-bottom: 1px solid #f6f6f6;
-            Margin: 20px 0; }
-        /* -------------------------------------
-            RESPONSIVE AND MOBILE FRIENDLY STYLES
-        ------------------------------------- */
+        }
+
+
         @media only screen and (max-width: 620px) {
             table[class=body] h1 {
                 font-size: 28px !important;
@@ -211,7 +96,18 @@
             table[class=body] .img-responsive {
                 height: auto !important;
                 max-width: 100% !important;
-                width: auto !important; }}
+                width: auto !important; }
+            .main .title {
+                font-size: 28px;
+            }
+            .main p {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+            .main .code {
+                font-size: 28px !important;
+            }
+        }
         @media all {
             .ExternalClass {
                 width: 100%; }
@@ -229,14 +125,11 @@
                 font-weight: inherit !important;
                 line-height: inherit !important;
                 text-decoration: none !important; }
-            .btn-primary table td:hover {
-                background-color: #34495e !important; }
-            .btn-primary a:hover {
-                background-color: #34495e !important;
-                border-color: #34495e !important; } }
+           }
     </style>
-</head>
-<body class="">
+@endsection
+
+@section('content')
 <table border="0" cellpadding="0" cellspacing="0" class="body">
     <tr>
         <td>&nbsp;</td>
@@ -250,32 +143,31 @@
                             <table border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td>
-                                       <div style="width:50px;height: 50px;"><img src="{{url('images/log.png')}}" width="50" height="50" alt=""></div>
-                                        <br>
+                                        <h1 class="title">Welcome to UTU</h1>
                                         <p>Hi {{$invitedCode->customer->first_name ?? ''}},</p>
                                         <br>
-                                        <p>You've been invited to join UTU ! Let's take social back from Big Tech and create social as it should be, together.  </p>
+                                        <p>You’ve been invited to join Voice! Let’s take social back from Big Tech and create social as it should be, together.  </p>
                                         <br>
                                         <p>First, go ahead and copy your invitation code: </p>
                                         <br>
-                                        <strong><h2>{{$invitedCode->code ?? ''}}</h2></strong>
+                                        <p class="code">{{$invitedCode->code ?? ''}}</p>
                                         <br>
                                         <p>Next, in order to create an account you will need to download the app.</p>
 
 
-                                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                                        <table border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                             <tr>
                                                 <td align="left">
                                                     <table border="0" cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                         <tr>
-                                                            <td style="background-color: #fff; border-color: #fff;"> <a style="background-color: #fff; border-color: #fff;" href="{{config('app.app_apple_store_download_link')}}" target="_blank">
+                                                            <td class="store"> <a  href="{{config('app.app_apple_store_download_link')}}" target="_blank">
                                                                     <img src="{{url('images/apple_store_download.png')}}" alt="">
                                                                 </a>
                                                             </td>
                                                             <td></td>
-                                                            <td style="background-color: #fff; border-color: #fff;"> <a style="background-color: #fff; border-color: #fff;" href="{{config('app.app_google_store_download_link')}}" target="_blank">
+                                                            <td class="store"> <a   href="{{config('app.app_google_store_download_link')}}" target="_blank">
                                                                     <img src="{{url('images/google_store_download.png')}}" alt="">
                                                                 </a>
                                                             </td>
@@ -287,40 +179,28 @@
                                             </tbody>
                                         </table>
 
-                                        <p>After the app is installed on your device, click "I have my invite code" on the login page, or select "Get started" to create your UTU account below. </p>
-
-                                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
-                                            <tbody>
-                                            <tr>
-                                                <td align="left">
-                                                    <table border="0" cellpadding="0" cellspacing="0">
-                                                        <tbody>
-                                                        <tr>
-
-                                                            <td colspan="3" style="text-align: center;"> <a href="{{url('download-mobile')}}" target="_blank">Get Start</a> </td>
-
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
                                         <br>
-                                        <p>Two things to note:</p>
+
+                                        <p>After the app is installed on your device, click “I have my invite code” on the login page, or select “Get started” to create your UTU account.</p>
                                         <br>
-                                        <ul>
-                                            <li>Your profile picture will be pulled from your signup selfie.  The ability to update your profile picture will be available soon. </li>
-                                            <li>UTU is built to give every human a voice. That means we work hard to ensure all accounts are created by people, and all people only create one account. Please do not attempt to create duplicate accounts, as we will be monitoring in the background and freezing users suspected of creating duplicate accounts.</li>
-                                        </ul>
-                                        <br>
-                                        <p>
-                                            The email associated with your UTU account will be: {{$invitedCode->customer->email ?? ''}}.
+                                        <p>Three things to note:</p>
+                                        <p>You must complete the process once you begin, or you might get stuck in our system
                                         </p>
                                         <br>
-
-                                        <p>If you want to use a different email address, you'll need your friend to send the invitation to your preferred email address.</p>
-
+                                        <p>Your profile picture will be pulled from your signup selfie.  The ability to update your profile picture will be available soon.
+                                        </p>
+                                        <br>
+                                        <p>UTU is a social platform built for real people, that means we work hard to ensure all accounts are created by people, and all people only create one account. Please do not attempt to create duplicate accounts, as we will be monitoring in the background and freezing users suspected of creating duplicate accounts.
+                                        </p>
+                                        <br>
+                                        <p>The email associated with your Voice account will be: {{$invitedCode->customer->email ?? ''}}.
+                                        </p>
+                                        <br>
+                                        <br>
+                                        <p>Got questions? Just hit reply, and we’re here to help, or visit our official website</p>
+                                        <br>
+                                        <br>
+                                        <br>
                                     </td>
                                 </tr>
                             </table>
@@ -336,5 +216,4 @@
         <td>&nbsp;</td>
     </tr>
 </table>
-</body>
-</html>
+@endsection
