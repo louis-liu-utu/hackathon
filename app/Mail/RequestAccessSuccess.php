@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendInvitedCode extends Mailable implements ShouldQueue
+class RequestAccessSuccess extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -16,11 +16,9 @@ class SendInvitedCode extends Mailable implements ShouldQueue
      *
      * @return void
      */
-    protected $invitedCode;
-
-    public function __construct($invitedCode)
+    public function __construct()
     {
-        $this->invitedCode = $invitedCode;
+        //
     }
 
     /**
@@ -30,8 +28,6 @@ class SendInvitedCode extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->subject('Welcome to UTU - invited code')
-            ->view('mails.invited_code')
-            ->with('invitedCode',$this->invitedCode);
+        return $this->view('mails.request_access_success');
     }
 }

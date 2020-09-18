@@ -1,22 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>UTU Email Notified</title>
+
     <style>
-        /* -------------------------------------
-            GLOBAL RESETS
-        ------------------------------------- */
         img {
             border: none;
             -ms-interpolation-mode: bicubic;
             max-width: 100%; }
         body {
-            background-color: #f6f6f6;
-            font-family: sans-serif;
+            height: 100%;
+            font: 14px -apple-system,BlinkMacSystemFont,sans-serif;
             -webkit-font-smoothing: antialiased;
-            font-size: 14px;
             line-height: 1.4;
             margin: 0;
             padding: 0;
@@ -63,17 +59,23 @@
             box-sizing: border-box;
             padding: 20px; }
         .footer {
-            clear: both;
-            padding-top: 10px;
-            text-align: center;
-            width: 100%; }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-            color: #999999;
+            max-width: 650px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        .footer .logo {
+            max-width: 300px;
+            height: auto;
+            width: 100%;
+        }
+        .footer .txt {
             font-size: 12px;
-            text-align: center; }
+            opacity: .6;
+        }
+        .footer a {
+            color: #000;
+        }
+
         /* -------------------------------------
             TYPOGRAPHY
         ------------------------------------- */
@@ -82,7 +84,7 @@
         h3,
         h4 {
             color: #000000;
-            font-family: sans-serif;
+            font-family: -apple-system,BlinkMacSystemFont,sans-serif;
             font-weight: 400;
             line-height: 1.4;
             margin: 0;
@@ -95,7 +97,7 @@
         p,
         ul,
         ol {
-            font-family: sans-serif;
+            font-family: -apple-system,BlinkMacSystemFont,sans-serif;
             font-size: 14px;
             font-weight: normal;
             margin: 0;
@@ -236,105 +238,24 @@
                 border-color: #34495e !important; } }
     </style>
 </head>
-<body class="">
-<table border="0" cellpadding="0" cellspacing="0" class="body">
-    <tr>
-        <td>&nbsp;</td>
-        <td class="container">
-            <div class="content">
-                <table class="main">
+<body>
 
-                    <!-- START MAIN CONTENT AREA -->
-                    <tr>
-                        <td class="wrapper">
-                            <table border="0" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td>
-                                       <div style="width:50px;height: 50px;"><img src="{{url('images/log.png')}}" width="50" height="50" alt=""></div>
-                                        <br>
-                                        <p>Hi {{$invitedCode->customer->first_name ?? ''}},</p>
-                                        <br>
-                                        <p>You've been invited to join UTU ! Let's take social back from Big Tech and create social as it should be, together.  </p>
-                                        <br>
-                                        <p>First, go ahead and copy your invitation code: </p>
-                                        <br>
-                                        <strong><h2>{{$invitedCode->code ?? ''}}</h2></strong>
-                                        <br>
-                                        <p>Next, in order to create an account you will need to download the app.</p>
+@yield('content')
 
 
-                                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
-                                            <tbody>
-                                            <tr>
-                                                <td align="left">
-                                                    <table border="0" cellpadding="0" cellspacing="0">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td style="background-color: #fff; border-color: #fff;"> <a style="background-color: #fff; border-color: #fff;" href="{{config('app.app_apple_store_download_link')}}" target="_blank">
-                                                                    <img src="{{url('images/apple_store_download.png')}}" alt="">
-                                                                </a>
-                                                            </td>
-                                                            <td></td>
-                                                            <td style="background-color: #fff; border-color: #fff;"> <a style="background-color: #fff; border-color: #fff;" href="{{config('app.app_google_store_download_link')}}" target="_blank">
-                                                                    <img src="{{url('images/google_store_download.png')}}" alt="">
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-
-                                        <p>After the app is installed on your device, click "I have my invite code" on the login page, or select "Get started" to create your UTU account below. </p>
-
-                                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
-                                            <tbody>
-                                            <tr>
-                                                <td align="left">
-                                                    <table border="0" cellpadding="0" cellspacing="0">
-                                                        <tbody>
-                                                        <tr>
-
-                                                            <td colspan="3" style="text-align: center;"> <a href="{{url('download-mobile')}}" target="_blank">Get Start</a> </td>
-
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                        <br>
-                                        <p>Two things to note:</p>
-                                        <br>
-                                        <ul>
-                                            <li>Your profile picture will be pulled from your signup selfie.  The ability to update your profile picture will be available soon. </li>
-                                            <li>UTU is built to give every human a voice. That means we work hard to ensure all accounts are created by people, and all people only create one account. Please do not attempt to create duplicate accounts, as we will be monitoring in the background and freezing users suspected of creating duplicate accounts.</li>
-                                        </ul>
-                                        <br>
-                                        <p>
-                                            The email associated with your UTU account will be: {{$invitedCode->customer->email ?? ''}}.
-                                        </p>
-                                        <br>
-
-                                        <p>If you want to use a different email address, you'll need your friend to send the invitation to your preferred email address.</p>
-
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                    <!-- END MAIN CONTENT AREA -->
-                </table>
-
-
-            </div>
-        </td>
-        <td>&nbsp;</td>
-    </tr>
-</table>
+<div class="footer">
+    <img class="logo"  src="{{url('images/email-logo.png')}}">
+    <p class="second-txt txt">
+        You are receiving this email because you registered your interest in UTU.<br>
+        if you no longer wish to receive these email you can Unsubscribe from this list at
+        any time.<br>
+        Please familiarise yourself with our <a href="{{url('/term-of-use')}}" target="_blank">Terms of Use</a>  and <a
+            href="{{'/privacy-notice'}}" target="_blank">Privacy Policy</a>
+    </p>
+    <p class="third-txt txt">
+        Copyright &copy;
+        <script>document.write(new Date().getFullYear())</script> UTU. All rights reserved.
+    </p>
+</div>
 </body>
 </html>

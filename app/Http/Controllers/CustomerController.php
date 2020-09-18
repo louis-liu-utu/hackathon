@@ -7,6 +7,7 @@ use App\Http\Requests\CreateCustomer;
 use App\Http\Services\InvitedCodeService;
 use App\InvitedCode;
 use App\Mail\AdminNotify;
+use App\Mail\RequestAccessSuccess;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -25,6 +26,7 @@ class CustomerController extends Controller
         if($customer = Customer::create($inputData)) {
             try {
                 Mail::to(config('app.admin_notified_mail'))->send(new AdminNotify($customer));
+                Mail::to($customer->email)->send(new RequestAccessSuccess());
             } catch (\Exception $exception) {
                 Log::channel('mail')->error($exception->getMessage());
             }
