@@ -147,8 +147,7 @@
             href="{{'/privacy-notice'}}" target="_blank">Privacy Policy</a>
     </p>
     <p class="third-txt txt">
-        Copyright &copy;
-        <script>document.write(new Date().getFullYear())</script> UTU. All rights reserved.
+        Copyright &copy; {{date("Y")}} UTU. All rights reserved.
     </p>
 </div>
 </body>
