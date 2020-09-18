@@ -49,6 +49,13 @@
                         <p>Contact Us</p>
                     </a>
                 </li>
+                <li class="nav-item {{Request::is('admin/blogs*') ? 'active' : ''}} ">
+                    <a class="nav-link" href="{{url('admin/blogs')}}">
+                        <i class="material-icons">post_add</i>
+                        <p>News List</p>
+                    </a>
+                </li>
+
                 <li class="nav-item ">
                     <a class="nav-link" href="{{url('admin/logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="material-icons">person</i>
