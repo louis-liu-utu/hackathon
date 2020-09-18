@@ -262,8 +262,7 @@
         You are receiving this email because you registered your interest in UTU.<br>
         if you no longer wish to receive these email you can Unsubscribe from this list at
         any time.<br>
-        Please familiarise yourself with our <a href="{{url('/term-of-use')}}" target="_blank">Terms of Use</a>  and <a
-            href="{{'/privacy-notice'}}" target="_blank">Privacy Policy</a>
+        Please familiarise yourself with our <a href="{{url('/term-of-use')}}" target="_blank">Terms of Use</a>  and <a href="{{'/privacy-notice'}}" target="_blank">Privacy Policy</a>
     </p>
     <p class="third-txt txt">
         Copyright &copy;
