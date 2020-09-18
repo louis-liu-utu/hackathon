@@ -138,7 +138,7 @@
 
 
 <div class="footer">
-    <a href="{{'/'}}" target="_blank"><img class="logo"  src="{{url('images/email-logo.png')}}"> </a>
+    <a href="{{url('/')}}" target="_blank"><img class="logo"  src="{{url('images/email-logo.png')}}"> </a>
     <p class="second-txt txt">
         You are receiving this email because you registered your interest in UTU.<br>
         if you no longer wish to receive these email you can Unsubscribe from this list at
