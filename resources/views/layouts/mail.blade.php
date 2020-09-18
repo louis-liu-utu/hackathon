@@ -236,6 +236,19 @@
             .btn-primary a:hover {
                 background-color: #34495e !important;
                 border-color: #34495e !important; } }
+
+            .request {
+                max-width: 650px;
+                margin: 200px auto 100px;
+            }
+            .request .title {
+                font-weight: 500;
+                text-align: left;
+            }
+            .request .primary-txt{
+                font-size: 26px;
+                opacity: .6;
+            }
     </style>
 </head>
 <body>

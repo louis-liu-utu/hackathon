@@ -1,20 +1,6 @@
 @extends('layouts.mail')
 
 @section('content')
-    <style>
-        .request {
-            max-width: 650px;
-            margin: 200px auto 100px;
-        }
-        .request .title {
-            font-weight: 500;
-            text-align: left;
-        }
-        .request .primary-txt{
-            font-size: 26px;
-            opacity: .6;
-        }
-    </style>
 <div class="request">
     <h1 class="title">
         Thank You for Requesting Beta Access!
