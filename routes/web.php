@@ -66,6 +66,10 @@ Route::get('/roadmap', function () {
     return view('roadmap');
 });
 
+Route::group(['prefix' => '/news'], function ($router) {
+    Route::get('/', 'FrontController@newsList');
+});
+
 Route::group(['prefix' => '/admin'], function ($router) {
 
     Route::group(['middleware' => 'auth'], function ($router) {

@@ -36,6 +36,9 @@ class Blog extends Model
         //return $query->orderBy('is_top','desc')->orderBy('sort','desc');
         return $query->orderBy('sort','desc');
     }
+    public function scopeActive($query) {
+        return $query->where('is_active',1);
+    }
 
     public function getStatus() {
         return $this->is_top ? 'top' : $this->is_active ? 'active' : 'inactive';

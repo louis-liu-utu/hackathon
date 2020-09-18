@@ -33,6 +33,10 @@ class BlogService
         return Blog::with('type')->with('topics')->priority()->get();
     }
 
+    public function getBlogsListForFront() {
+        return Blog::with('type')->active()->priority()->get();
+    }
+
     public function deleteBlog($blog) {
         try {
             $this->deleteClearImage($blog);
