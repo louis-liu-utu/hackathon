@@ -45,7 +45,7 @@ class BlogService
     public function updateBlog($request,$blog) {
         try {
             $blog->update($request->except('thumbnail'));
-            $this->uploadThumbnail($request,$blog->thumbnail);
+            $blog->thumbnail = $this->uploadThumbnail($request,$blog->thumbnail);
             $blog->lb_content = $request->lb_content;
             $blog->save();
             if($request->has('is_top')) $this->setOnlyBlogTop($blog);

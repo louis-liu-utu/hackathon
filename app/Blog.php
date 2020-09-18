@@ -9,6 +9,7 @@ class Blog extends Model
 {
     use Gutenbergable;
 
+    public $timestamps = true;
     const Default_Thumbnail = "images/blog-default.jpg";
 
     protected $fillable = [
@@ -42,14 +43,14 @@ class Blog extends Model
 
     public function getThumbnailUrl() {
         if(file_exists(public_path('/storage/blogs/'.$this->thumbnail))) {
-            return url('/storage/blogs/'.$this->thumbnail);
+            return url('/storage/blogs/'.$this->thumbnail.'?'.$this->updated_at);
         }
         return url(self::Default_Thumbnail);
     }
 
     public function getOriginalImagelUrl() {
         if(file_exists(public_path('/storage/blogs/'.ltrim($this->thumbnail,'t_')))) {
-            return url('/storage/blogs/'.ltrim($this->thumbnail,'t_'));
+            return url('/storage/blogs/'.ltrim($this->thumbnail,'t_').'?'.$this->updated_at);
         }
         return url(self::Default_Thumbnail);
     }

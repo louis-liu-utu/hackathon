@@ -11,6 +11,8 @@ class InvitedCode extends Model
     const STATUS_VERIFIED = 2;
     const STATUS_EXPIRED = -1;
 
+    public $timestamps = true;
+
     protected $fillable = [
         'code',
         'sent_at',
