@@ -61,6 +61,12 @@
         .main .store {
             padding: 30px;
         }
+
+        @media only screen and (max-width: 620px) {
+            .main .store {
+                padding: 10px;
+            }
+        }
         .wrapper {
             box-sizing: border-box;
         }
@@ -103,9 +109,6 @@
             .main p {
                 font-size: 16px;
                 margin-bottom: 0;
-            }
-            .main .code {
-                font-size: 28px !important;
             }
         }
         @media all {
