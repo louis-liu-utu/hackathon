@@ -37,6 +37,7 @@
         .footer .txt {
             font-size: 12px;
             opacity: .6;
+            color: #000;
         }
         .footer a {
             color: #000;
