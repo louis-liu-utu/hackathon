@@ -12,17 +12,22 @@
         <div class="news-item row">
             <div class="col-sm-6">
                 <div class="news-img">
-                    <img src="{{$item->getThumbnailUrl()}}" alt="{{$item->title}}">
+                    <a href="{{url('news/'.$item->slug)}}">
+                        <img src="{{$item->getThumbnailUrl()}}" alt="{{$item->title}}">
+                    </a>
+
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="news-list">
                     <div class="news-txt1">
                         <span class="news-type">{{$item->type->name}}</span>
-                        <span class="news-date">{{date('d M yy',strtotime($item->published_at))}}</span>
+                        <span class="news-date">{{$item->getPublishDate()}}</span>
                     </div>
                     <div class="news-subtitle">
+                        <a href="{{url('news/'.$item->slug)}}">
                         {{Str::words($item->title ,10,'...')}}
+                        </a>
                     </div>
                     <div class="news-txt2">
                         {!! Str::words($item->lb_content,60,'</div>...') !!}

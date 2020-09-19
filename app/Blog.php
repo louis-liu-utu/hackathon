@@ -57,4 +57,7 @@ class Blog extends Model
         }
         return url(self::Default_Thumbnail);
     }
+    public function getPublishDate() {
+        return date('d M Y', strtotime($this->published_at));
+    }
 }

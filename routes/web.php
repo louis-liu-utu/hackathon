@@ -68,6 +68,7 @@ Route::get('/roadmap', function () {
 
 Route::group(['prefix' => '/news'], function ($router) {
     Route::get('/', 'FrontController@newsList');
+    Route::get('/{slug}', 'FrontController@newsDetail');
 });
 
 Route::group(['prefix' => '/admin'], function ($router) {
