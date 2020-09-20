@@ -122,10 +122,10 @@
                         @foreach($types as $type)
                         <tr>
                             <td>{{$type->id}}</td>
-                            <td><input type="text" id="type-{{$type->id}}" value="{{$type->name}}"> </td>
+                            <td><input type="text"  id="type-{{$type->id}}" value="{{$type->name}}"> </td>
                             <td>
                                 <span onclick="updateType('{{$type->id}}')" class="material-icons icon-image-preview">edit</span>
-                                <span  onclick="deleteType('{{$type->id}}')"  class="material-icons icon-image-preview">delete</span>
+                                <span  onclick="deleteType('{{$type->id}}', '{{$type->blogs_count}}')"  class="material-icons icon-image-preview">delete</span>
                             </td>
                         </tr>
                         @endforeach
@@ -268,7 +268,11 @@
             }
         }
 
-        function deleteType(typeId) {
+        function deleteType(typeId, blogs_count) {
+            if(blogs_count != 0) {
+                alert('please move the news that under this type first.');
+                return;
+            }
             if(window.confirm("are you sure to delete it?")) {
                 $.get('{{url("/")}}' + '/admin/blogs-types/' + typeId + '/delete', function( data ) {
                     $("#type-"+typeId).parent().parent().remove();
@@ -285,7 +289,7 @@
                     $(parent).find('input').attr('id','type-' + data.id);
                     var td = $(me).parent();
                     $(td).html('<span onclick="updateType(' + data.id + ')" class="material-icons icon-image-preview">edit</span>' +
-                        '                                <span  onclick="deleteType(' + data.id + ')"  class="material-icons icon-image-preview">delete</span>');
+                        '                                <span  onclick="deleteType(' + data.id + ',0)"  class="material-icons icon-image-preview">delete</span>');
                     $('#type-table').append('<tr>' +
                         '                            <td class="typeId"></td>' +
                         '                            <td><input type="text" ></td>' +

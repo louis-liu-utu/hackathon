@@ -19,7 +19,7 @@ class BlogController extends Controller
 
     public function index() {
         $blogs = $this->blogService->getDefaultBlogsList();
-        $types = BlogType::orderBy('id')->get();
+        $types = BlogType::withCount('blogs')->orderBy('id')->get();
         return view('admin.blogs.index',compact('blogs','types'));
     }
 
