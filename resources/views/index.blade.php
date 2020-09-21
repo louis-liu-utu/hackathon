@@ -10,7 +10,7 @@
 
 @section('content')
     <section class="home0" >
-        <video id="video"  autoplay>
+        <video id="video" >
             <source src="{{url('files/utu_promo.mp4')}}" type="video/mp4">
             <source src="{{url('files/utu_promo.webm')}}" type="video/webm">
             <source src="{{url('files/utu_promo.ogg')}}" type="video/ogg">

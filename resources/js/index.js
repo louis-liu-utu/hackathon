@@ -18,14 +18,13 @@ if (supportsVideo) {
         headerDisplay = "block"
     }
 
-    console.log('home1',home1.offsetHeight);
+
 
 
     iconPlayer.addEventListener('click', function (e) {
         home1.style.display = "none";
         header.style.display = headerDisplay;
         home0.style.display = "block";
-        console.log('home0',home0.offsetHeight);
 
         if (homeVideo.paused || homeVideo.ended) homeVideo.play();
         else homeVideo.pause();
