@@ -9,6 +9,14 @@
 @endsection
 
 @section('content')
+    <section class="home0" >
+        <video id="video"  autoplay>
+            <source src="{{url('files/utu_promo.mp4')}}" type="video/mp4">
+            <source src="{{url('files/utu_promo.webm')}}" type="video/webm">
+            <source src="{{url('files/utu_promo.ogg')}}" type="video/ogg">
+            Your browser does not support HTML video.
+        </video>
+    </section>
 
 <section class="home1">
     <div class="container">
@@ -19,9 +27,9 @@
                          <h1 class="home1-txt-title1-txt">
                          redefine
                          </h1>
-                        {{-- <div class="home1-txt-sm">
-                             Watch film <div class="icon-player"></div>
-                         </div>--}}
+                        <div class="home1-txt-sm">
+                             Watch film <span id="icon-Player" class="iconfont icon-Player"></span>
+                         </div>
                      </div>
                      <div class="home1-txt-title-img">
                          <img src="{{url('/images/home-phone1.png?v=3')}}" alt="utu social platform">
