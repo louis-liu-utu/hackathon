@@ -56,6 +56,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item {{Request::is('admin/careers*') ? 'active' : ''}} ">
+                    <a class="nav-link" href="{{url('admin/careers')}}">
+                        <i class="material-icons">bookmarks</i>
+                        <p>Careers List</p>
+                    </a>
+                </li>
+
                 <li class="nav-item ">
                     <a class="nav-link" href="{{url('admin/logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="material-icons">person</i>

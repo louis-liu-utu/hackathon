@@ -93,8 +93,9 @@ Route::group(['prefix' => '/admin'], function ($router) {
         Route::get('/blogs-types/add','BlogController@addType');
         Route::get('/blogs-types/{blogType}/update','BlogController@updateType');
         Route::get('/blogs-types/{blogType}/delete','BlogController@deleteType');
-
         Route::get('/blogs-sort','BlogController@ajaxSort');
+
+        Route::resource('/careers','CareerController');
     });
 
     //admin user
