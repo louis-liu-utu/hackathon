@@ -13,11 +13,19 @@
                             <form action="{{url('admin/careers/'.$career->id)}}" method="post" >
                                 @csrf
                                 <input name="_method" type="hidden" value="PUT">
+                                <input type="hidden" name="id" value="{{$career->id}}">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group bmd-form-group">
                                             <label class="bmd-label-floating">Title</label>
-                                            <input type="text"  name="title" required value="{{$career->title}}" class="form-control">
+                                            <input type="text" id="title" name="title" required value="{{$career->title}}" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group bmd-form-group">
+                                            <label class="bmd-label-floating">Slug</label>
+                                            <input type="text" id="slug" name="slug" required value="{{$career->slug}}" class="form-control">
                                         </div>
                                     </div>
 
@@ -71,5 +79,13 @@
             laravelFilemanager: true,
             height: "500px"
         });
+
+        $('#title').change(function (e) {
+            $('#slug').val($(this).val()
+                .toLowerCase()
+                .replace(/[^\w ]+/g,'')
+                .replace(/ +/g,'-'));
+        });
+
     </script>
 @endsection

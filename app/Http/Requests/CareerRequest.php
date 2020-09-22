@@ -25,7 +25,18 @@ class CareerRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
-            'lb_content' => 'required'
+            'lb_content' => 'required',
+            'slug' => 'required|unique:careers,slug,'.$this->id,
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'title is required',
+            'slug.unique' => 'slug already exists, please re-edit',
+            'lb_content.required' => 'content is required'
+        ];
+    }
+
 }

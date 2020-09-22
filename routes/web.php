@@ -20,9 +20,8 @@ Route::get('/help-center', function () {
     return view('help_center');
 });
 
-Route::get('/careers', function () {
-    return view('careers');
-});
+Route::get('/careers', 'FrontController@careers');
+Route::get('/careers/{slug}', 'FrontController@careerDetail');
 
 Route::get('/about-us', function () {
     return view('introduce');

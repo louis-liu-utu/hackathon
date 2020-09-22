@@ -15,15 +15,17 @@
         </p>
         <div class="careers-list">
             <h2 class="second-title">Current Job Openings</h2>
+            @foreach($careers as $career)
             <div class="careers-item">
                 <h3 class="careers-item-title">
-                    Senior Product Manager
+                    <a href="{{url('careers/'.$career->slug)}}">{{$career->title}}</a>
                 </h3>
                 <p class="careers-item-txt">
-                    Melbourne,AU
+                    {{$career->location}}
                 </p>
             </div>
-            <div class="careers-item">
+            @endforeach
+           {{-- <div class="careers-item">
                 <h3 class="careers-item-title">
                     Product Designer
                 </h3>
@@ -86,7 +88,7 @@
                 <p class="careers-item-txt">
                     Melbourne,AU
                 </p>
-            </div>
+            </div>--}}
 
         </div>
 
