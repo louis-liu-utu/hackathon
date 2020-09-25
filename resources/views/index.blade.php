@@ -43,7 +43,7 @@
                          <div class="home1-icons-img">
                              <img src="{{url('images/android_download.png')}}" alt="utu App Android Download">
                          </div>
-                         <a class="home1-icons-txt">
+                         <a href="{{url('files/utu_v_0.1.apk')}}"class="home1-icons-txt">
                              Android Download
                          </a>
                      </div>

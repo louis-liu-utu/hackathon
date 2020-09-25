@@ -10,7 +10,6 @@ class App extends Model
     protected $fillable = [
         'name',
         'url',
-        'thumb',
         'file_name'
     ];
 

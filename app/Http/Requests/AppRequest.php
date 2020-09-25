@@ -25,7 +25,15 @@ class AppRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'url' => 'url',
+            'file_name' => 'sometimes|file',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'app name is required',
+            'file_name.mimes' => 'app must be apk, otherwise please input url'
         ];
     }
 }

@@ -34,9 +34,7 @@
                                     <th>
                                         url
                                     </th>
-                                    <th>
-                                        thumb
-                                    </th>
+
                                     <th>
                                         file
                                     </th>
@@ -47,23 +45,24 @@
                                     <tbody>
                                     @foreach($apps as $app)
                                         <tr>
+                                            <form id="{{$app->id}}" action="{{url('admin/apps/'.$app->id)}}"  method="post" enctype="multipart/form-data">
                                             <td>
                                                 <div class="form-group ">
                                                     <select required class="form-control" name="name">
                                                         <option value="" disabled selected>choose ...</option>
-                                                        <option {{$app->name === 'android google store' ? 'selected' : ''}} value="android google store">
+                                                        <option {{$app['name'] === 'android google store' ? 'selected' : ''}} value="android google store">
                                                             android google store
                                                         </option>
-                                                        <option {{$app->name === 'android beta' ? 'selected' : ''}}  value="android beta">
+                                                        <option {{$app['name'] === 'android beta' ? 'selected' : ''}}  value="android beta">
                                                             android beta
                                                         </option>
-                                                        <option {{$app->name === 'apple china store' ? 'selected' : ''}}  value="apple china store">
+                                                        <option {{$app['name'] === 'apple china store' ? 'selected' : ''}}  value="apple china store">
                                                             apple china store
                                                         </option>
-                                                        <option {{$app->name === 'apple international store' ? 'selected' : ''}}  value="apple international store">
+                                                        <option {{$app['name'] === 'apple international store' ? 'selected' : ''}}  value="apple international store">
                                                             apple international store
                                                         </option>
-                                                        <option {{$app->name === 'apple beta' ? 'selected' : ''}}  value="apple beta">
+                                                        <option {{$app['name'] === 'apple beta' ? 'selected' : ''}}  value="apple beta">
                                                             apple beta
                                                         </option>
                                                     </select>
@@ -74,41 +73,39 @@
                                                     <input type="text" name="url" value="{{$app->url}}" class="form-control">
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div class="form-group">
-                                                    <input type="file" name="thumb" class="form-control">
-                                                    <img src="" alt="">
-                                                </div>
-                                            </td>
+
 
                                             <td>
-                                                <div class="form-group">
-                                                    <input type="file" name="file_name" class="form-control">
-
-                                                </div>
+                                                <input type="file" name="file_name" >
+                                                @if($app->file_name)
+                                                    <a href="{{url('files/'.$app->file_name)}}">
+                                                <span class="material-icons icon-image-preview">cloud_download</span>
+                                                    </a>
+                                                @endif
                                             </td>
 
                                             <td >
-                                                <form action="{{url('admin/apps/'.$app->id)}}"  method="post">
                                                     @csrf
                                                     <input name="_method" type="hidden" value="PUT">
-                                                    <button class="custom-button btn-edit" >
-                                                        <span class="material-icons icon-image-preview">Edit</span>
-                                                    </button>
+                                                    <input type="submit" class="btn btn-primary" value="update"/>
+
+                                                <button class="btn btn-primary"  onclick="delete();">
+                                                    delete
+                                                </button>
+
+                                                <form id="delete_form_{{$app->id}}" action="{{ url('admin/apps/'.$app->id) }}" method="POST" style="display: none;">
+                                                    {{ csrf_field() }}
+                                                    <input name="_method" type="hidden" value="DELETE">
+                                                    @csrf
                                                 </form>
 
-                                                <form action="{{url('admin/apps/'.$app->id)}}"  method="post">
-                                                    @csrf
-                                                    <input name="_method" type="hidden" value="DELETE">
-                                                    <button class="custom-button btn-del" >
-                                                        <span class="material-icons icon-image-preview">delete</span>
-                                                    </button>
-                                                </form>
                                             </td>
+                                            </form>
                                         </tr>
                                     @endforeach
 
                                     <tr>
+                                        <form id="0" action="{{url('admin/apps/')}}"  method="post" enctype="multipart/form-data">
                                         <td>
                                             <div class="form-group ">
                                                 <select required class="form-control" name="name">
@@ -136,20 +133,16 @@
                                                 <input type="text" name="url" value="{{old('url')}}" class="form-control">
                                             </div>
                                         </td>
-                                        <td>
-                                            <input type="file" name="thumb" >
-                                        </td>
+
                                         <td>
                                             <input type="file" name="file_name">
                                         </td>
                                         <td>
-                                            <form action="{{url('admin/apps/')}}"  method="post">
+
                                                 @csrf
-                                                <button class="custom-button btn-edit" >
-                                                    <span class="material-icons icon-image-preview">create_new_folder</span>
-                                                </button>
-                                            </form>
+                                                <input type="submit" name="0" class="btn btn-primary " value="add" />
                                         </td>
+                                        </form>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -164,13 +157,6 @@
 
 @endsection
 
-@section('javascript')
-    <script>
-        $('.btn-del').click(function (e) {
-            e.preventDefault();
-            if(window.confirm('are you sure to delete it?')) {
-                $(this).parents('form').submit();
-            }
-        });
-    </script>
-@endsection
+<script>
+
+</script>
