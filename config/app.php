@@ -226,6 +226,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        //customize
+        'AppSoftware' => App\Helpers\AppSoftware::class
     ],
 
     'admin_notified_mail' => env('ADMIN_NOTIFIED_MAIL','ouis@utu.one'),

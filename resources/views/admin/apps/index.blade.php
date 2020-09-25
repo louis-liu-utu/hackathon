@@ -39,6 +39,9 @@
                                         file
                                     </th>
                                     <th>
+                                        downloads count
+                                    </th>
+                                    <th>
                                         actions
                                     </th>
                                     </thead>
@@ -78,28 +81,29 @@
                                             <td>
                                                 <input type="file" name="file_name" >
                                                 @if($app->file_name)
-                                                    <a href="{{url('files/'.$app->file_name)}}">
+                                                    <a href="{{url('storage/app_downloads/'.$app->file_name)}}">
                                                 <span class="material-icons icon-image-preview">cloud_download</span>
                                                     </a>
                                                 @endif
                                             </td>
+                                                <td>
+                                                    {{$app->downloads_count}}
+                                                </td>
 
                                             <td >
                                                     @csrf
                                                     <input name="_method" type="hidden" value="PUT">
                                                     <input type="submit" class="btn btn-primary" value="update"/>
 
-                                                <button class="btn btn-primary"  onclick="delete();">
+                                                <button type="button" class="btn btn-primary"  onclick="deleteApp('delete_form_{{$app->id}}')">
                                                     delete
                                                 </button>
-
-                                                <form id="delete_form_{{$app->id}}" action="{{ url('admin/apps/'.$app->id) }}" method="POST" style="display: none;">
-                                                    {{ csrf_field() }}
-                                                    <input name="_method" type="hidden" value="DELETE">
-                                                    @csrf
-                                                </form>
-
                                             </td>
+                                            </form>
+                                            <form id="delete_form_{{$app->id}}" action="{{ url('admin/apps/'.$app->id) }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                                <input name="_method" type="hidden" value="DELETE">
+                                                @csrf
                                             </form>
                                         </tr>
                                     @endforeach
@@ -158,5 +162,9 @@
 @endsection
 
 <script>
-
+    function deleteApp(formId) {
+        if(window.confirm('are you sure to delete it?')) {
+            document.getElementById(formId).submit();
+        }
+    }
 </script>

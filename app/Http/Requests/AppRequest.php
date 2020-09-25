@@ -36,4 +36,5 @@ class AppRequest extends FormRequest
             'file_name.mimes' => 'app must be apk, otherwise please input url'
         ];
     }
+
 }

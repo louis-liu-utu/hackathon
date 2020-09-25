@@ -61,9 +61,11 @@ Route::get('/cookie-notice', function () {
 Route::get('/term-of-use', function () {
     return view('terms');
 });
+
 Route::get('/roadmap', function () {
     return view('roadmap');
 });
+Route::get('/app-download/{name}','FrontController@downloadAppAndStat');
 
 Route::group(['prefix' => '/news'], function ($router) {
     Route::get('/', 'FrontController@newsList');
@@ -107,6 +109,7 @@ Route::group(['prefix' => '/admin'], function ($router) {
     Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
 });
+
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();

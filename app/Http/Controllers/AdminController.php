@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\AppDownload;
 use App\Customer;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -41,16 +42,28 @@ class AdminController extends Controller
         $serieSmallest = round($seriesSorted->first() * 0.5);
         $serieBiggest = round($seriesSorted->last() * 1.2);
 
+        $appDownloads = AppDownload::lastYear()->countByDate()->get();
+        $downloadLabels = $appDownloads->map(function ($appDownload) {
+            return date( 'm/d',strtotime($appDownload->date));
+        })->toJson();
+
+        $downloadS = $appDownloads->map(function ($appDownload) {
+            return $appDownload->count;
+        });
+
+        $downloadSeries = $downloadS->toJson();
+        $downloadSeriesSorted  = $downloadS->sort();
+        $downloadSerieSmallest = round($downloadSeriesSorted->first() * 0.5);
+        $downloadSerieBiggest = round($downloadSeriesSorted->last() * 1.2);
+
+
 
         $analyticsData = Analytics::fetchTotalVisitorsAndPageViews(Period::create(Carbon::now()->subDays(365),now()));
-
-
         $analyticsLabels = [];
         $analyticsSeriesPageViews = [];
         $analyticsSeriesvisitors= [];
         $analyticsSerieSmallest = 100000000;
         $analyticsSerieBiggest = 0;
-
         foreach ($analyticsData as $analyticsRow) {
             if($analyticsRow['pageViews'] || $analyticsRow['visitors']) {
                 $analyticsLabels[] = $analyticsRow['date']->format('m/d');
@@ -69,8 +82,16 @@ class AdminController extends Controller
         }
         $analyticsLabels = json_encode($analyticsLabels);
         $analyticsSeries = json_encode([$analyticsSeriesPageViews,$analyticsSeriesvisitors]);
-        return view('admin.dashboard',compact('labels','series','analyticsLabels','analyticsSeries',
-        'serieSmallest','serieBiggest','analyticsSerieSmallest','analyticsSerieBiggest'));
+
+
+        return view('admin.dashboard',compact(
+            'labels','series',
+            'analyticsLabels','analyticsSeries',
+            'serieSmallest','serieBiggest',
+            'analyticsSerieSmallest','analyticsSerieBiggest',
+            'downloadLabels', 'downloadSeries',
+            'downloadSerieSmallest','downloadSerieBiggest'
+        ));
     }
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use App\Career;
+use App\Helpers\AppSoftware;
 use App\Http\Services\BlogService;
 use App\Http\Services\CareerService;
 use Illuminate\Http\Request;
@@ -30,5 +31,11 @@ class FrontController extends Controller
         return view('career-detail',compact('career'));
     }
 
+    public function downloadAppAndStat($name) {
+       AppSoftware::increaseDownload($name);
+       $file = AppSoftware::getDownloadFile($name);
+       if($file) return response()->download($file);
+       return response()->redirectTo(AppSoftware::getLink($name));
+    }
 
 }

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\File;
 class AppController extends Controller
 {
     public function index() {
-        $apps = App::with('downloads')->withCount('downloads')->get();
+        $apps = App::withCount('downloads')->get();
         return view('admin.apps.index', compact('apps'));
     }
 
@@ -39,6 +39,7 @@ class AppController extends Controller
 
     public function destroy(App $app) {
         try {
+            unlink(public_path('storage/app_downloads/'.$app->file_name));
             $app->delete();
             return back()->with('success','delete successfully');
         } catch (\Exception $e) {
@@ -49,7 +50,8 @@ class AppController extends Controller
     private function uploadFile($request,$fileName = null) {
         if($request->hasFile('file_name')) {
             if(!$fileName) $fileName = time().'_'.$request->file_name->getClientOriginalName();
-            $path = public_path('files');
+            $path = public_path('storage/app_downloads');
+            File::isDirectory($path) or File::makeDirectory($path, 0777,true, true);
             $request->file_name->move($path, $fileName);
             return $fileName;
         }
