@@ -10,9 +10,7 @@
                            <div class="ct-chart" id="completedTasksChart1"></div>
                        </div>
                        <div class="card-body">
-                           <h4 class="card-title">Google Analytics Total</h4>
-                           <p class="card-category">Red Line: visitors</p>
-                           <p class="card-category">White Line: pageViews</p>
+                           <h4 class="card-title">Google Analytics ( <span class="card-category">Red Line: visitors</span>; <span class="card-category">White Line: pageViews</span>)</h4>
                        </div>
                    </div>
                </div>
@@ -25,12 +23,10 @@
                            <div class="card-body">
                                <h4 class="card-title">Request Access Applications</h4>
                            </div>
-
                        </div>
                    </div>
-
                </div>
-    </div>
+        </div>
     </div>
 @endsection
 

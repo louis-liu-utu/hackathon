@@ -63,6 +63,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item {{Request::is('admin/apps*') ? 'active' : ''}} ">
+                    <a class="nav-link" href="{{url('admin/apps')}}">
+                        <i class="material-icons">cloud_download</i>
+                        <p>App Software</p>
+                    </a>
+                </li>
+
                 <li class="nav-item ">
                     <a class="nav-link" href="{{url('admin/logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="material-icons">person</i>

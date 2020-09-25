@@ -95,6 +95,7 @@ Route::group(['prefix' => '/admin'], function ($router) {
         Route::get('/blogs-sort','BlogController@ajaxSort');
 
         Route::resource('/careers','CareerController');
+        Route::resource('/apps','AppController');
     });
 
     //admin user
