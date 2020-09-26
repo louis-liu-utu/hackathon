@@ -98,6 +98,7 @@ Route::group(['prefix' => '/admin'], function ($router) {
 
         Route::resource('/careers','CareerController');
         Route::resource('/apps','AppController');
+        Route::get('/apps/{app}/delete_file','AppController@deleteFile');
     });
 
     //admin user

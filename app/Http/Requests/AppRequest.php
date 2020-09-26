@@ -24,7 +24,7 @@ class AppRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|unique:apps,name,'.$this->id,
             'file_name' => 'sometimes|file',
         ];
     }
@@ -33,6 +33,7 @@ class AppRequest extends FormRequest
     {
         return [
             'name.required' => 'app name is required',
+            'name.unique' => $this->name . ' already exist, please update it or choose other',
             'file_name.mimes' => 'app must be apk, otherwise please input url'
         ];
     }

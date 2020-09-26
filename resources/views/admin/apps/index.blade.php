@@ -73,6 +73,7 @@
                                             </td>
                                             <td>
                                                 <div class="form-group">
+                                                    <input name="id" type="hidden" value="{{$app->id}}">
                                                     <input type="text" name="url" value="{{$app->url}}" class="form-control">
                                                 </div>
                                             </td>
@@ -84,6 +85,9 @@
                                                     <a href="{{url('storage/app_downloads/'.$app->file_name)}}">
                                                 <span class="material-icons icon-image-preview">cloud_download</span>
                                                     </a>
+                                                    <a href="{{url('admin/apps/'.$app->id.'/delete_file')}}" onclick = "if (! confirm('are you sure to delete the software?')) { return false; }">
+                                                    <span class="material-icons icon-image-preview">delete</span>
+                                                    </a>
                                                 @endif
                                             </td>
                                                 <td>
@@ -91,6 +95,7 @@
                                                 </td>
 
                                             <td >
+
                                                     @csrf
                                                     <input name="_method" type="hidden" value="PUT">
                                                     <input type="submit" class="btn btn-primary" value="update"/>

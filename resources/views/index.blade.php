@@ -43,15 +43,10 @@
                          <div class="home1-icons-img">
                              <img src="{{url('images/android_download.png')}}" alt="utu App Android Download">
                          </div>
-                         @if(AppSoftware::has('android beta'))
-                             <a href="{{url('app-download/android beta')}}"class="home1-icons-txt">
-                                 Android Download
-                             </a>
-                         @else
-                             <a href="{{url('files/utu_v_0.1.apk')}}"class="home1-icons-txt">
-                                 Android Download
-                             </a>
-                         @endif
+
+                         <a href="{{url('app-download/android beta')}}"class="home1-icons-txt">
+                             Android Download
+                         </a>
 
                      </div>
                      <div class="home1-icons-item">

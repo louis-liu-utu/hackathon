@@ -12,7 +12,7 @@ class AppSoftware {
 
     public static function increaseDownload($name) {
         $app = App::where('name', $name)->first();
-        $app->downloadIncrease();
+        $app && $app->downloadIncrease();
     }
 
     public static function getLink($name) {
@@ -22,6 +22,9 @@ class AppSoftware {
 
     public static function getDownloadFile($name) {
         $app = App::where('name', $name)->first();
+
+        if($name === 'android beta' && (!$app || $app && !$app->url && !$app->file_name))  return public_path('files/utu_v_0.1.apk');
+
         return $app && $app->getFullFilePath();
     }
 
