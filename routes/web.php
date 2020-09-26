@@ -85,7 +85,8 @@ Route::group(['prefix' => '/admin'], function ($router) {
 
         Route::get('/contacts','ContactController@index');
         Route::get('/contacts/{id}','ContactController@show');
-        Route::delete('/contacts/{id}','ContactController@destroy');
+        Route::delete('/contacts/{contact}','ContactController@destroy');
+        Route::post('/contacts/{contact}/reply','ContactController@reply');
 
         Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 

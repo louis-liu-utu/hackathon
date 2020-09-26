@@ -10,8 +10,8 @@
                             <h4 class="card-title">Process Request Access Application</h4>
                         </div>
                         <div class="card-body">
-                            <form>
-
+                            <form action="{{url('admin/contacts/'.$contact->id.'/reply')}}" method="post">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group bmd-form-group">
@@ -54,12 +54,13 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Answer</label>
-                                        <div class="form-group bmd-form-group">
-                                            <textarea class="form-control"  rows="5">{{$contact->answer}}</textarea>
+                                        <div class="form-group bmd-form-group" >
+                                            <textarea class="form-control" name="answer" rows="5">{{old('answer') ?? $contact->answer}}</textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="mt-5 mb-5">
+                                    @include('layouts.message')
                                     <button type="submit" class="btn btn-primary pull-right">Answer & Send Reply Email</button>
                                 </div>
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Contact;
 use App\Http\Requests\CreateContact;
+use App\Http\Requests\ReplyContact;
+use App\Mail\AnswerContact;
 use App\Mail\ContactNotify;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -35,5 +37,27 @@ class ContactController extends Controller
     public function show($id) {
         $contact = Contact::findOrFail($id);
         return view('admin.contacts.edit', compact('contact'));
+    }
+
+
+    public function reply(ReplyContact $request, Contact $contact) {
+        try {
+            $contact->answer = $request->answer;
+            $contact->save();
+            Mail::to($contact->email)->send(new AnswerContact($contact));
+            return redirect()->back()->with('success', 'send reply email successfully');
+        } catch (\Exception $e) {
+            Log::channel('mail')->error($e->getMessage());
+        }
+        return redirect()->back()->withErrors('fail to send reply email');
+    }
+
+    public function destroy(Contact $contact) {
+        try {
+            $contact->delete();
+            return back()->with('success','delete successfully.');
+        } catch (\Exception $e) {
+            return back()->withErrors($e->getMessage());
+        }
     }
 }
