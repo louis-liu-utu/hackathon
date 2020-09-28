@@ -34,7 +34,7 @@ class App extends Model
 
     public function getFullFilePath() {
         $fullFilePath = public_path('storage/app_downloads/'.$this->file_name);
-        if(file_exists($fullFilePath)) return $fullFilePath;
+        if($this->file_name && file_exists($fullFilePath)) return $fullFilePath;
         return "";
     }
 }
