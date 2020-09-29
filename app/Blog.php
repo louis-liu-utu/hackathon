@@ -45,14 +45,14 @@ class Blog extends Model
     }
 
     public function getThumbnailUrl() {
-        if(file_exists(public_path('/storage/blogs/'.$this->thumbnail))) {
+        if($this->thumbnail && file_exists(public_path('/storage/blogs/'.$this->thumbnail))) {
             return url('/storage/blogs/'.$this->thumbnail.'?'.$this->updated_at);
         }
         return url(self::Default_Thumbnail);
     }
 
     public function getOriginalImagelUrl() {
-        if(file_exists(public_path('/storage/blogs/'.ltrim($this->thumbnail,'t_')))) {
+        if($this->thumbnail && file_exists(public_path('/storage/blogs/'.ltrim($this->thumbnail,'t_')))) {
             return url('/storage/blogs/'.ltrim($this->thumbnail,'t_').'?'.$this->updated_at);
         }
         return url(self::Default_Thumbnail);
