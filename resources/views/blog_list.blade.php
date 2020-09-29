@@ -30,7 +30,7 @@
                         </a>
                     </div>
                     <div class="news-txt2">
-                        {!! Str::words($item->lb_content,60,'</div>...') !!}
+                        {!! Str::words(strip_tags($item->lb_content),60,'...') !!}
                     </div>
                 </div>
             </div>
