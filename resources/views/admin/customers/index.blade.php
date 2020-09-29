@@ -34,6 +34,9 @@
                                         Create Time
                                     </th>
                                     <th>
+                                        InvitedCode State
+                                    </th>
+                                    <th>
                                         Process
                                     </th>
                                     </thead>
@@ -57,6 +60,9 @@
                                             </td>
                                             <td >
                                                 {{$customer->created_at}}
+                                            </td>
+                                            <td>
+                                                {{$customer->getInvitedStatus()}}
                                             </td>
                                             <td >
                                                 <a href="{{url('admin/customers/'.$customer->id)}}">
