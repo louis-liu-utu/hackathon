@@ -98,7 +98,7 @@
                                                                 {{$invitedCode->sent_at}}
                                                             </td>
                                                             <td>
-                                                                {{$invitedCode->expired_at}}
+                                                                {{$invitedCode->expired_by}}
                                                             </td>
                                                         </tr>
                                                     @empty
