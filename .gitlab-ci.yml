@@ -1,0 +1,14 @@
+stages:
+  - deploy
+production:
+  stage: deploy
+  script:
+    - sudo git pull origin master
+    - php artisan migrate
+    - php artisan config:cache
+  environment:
+    name: production
+    url: https://www.utu.one
+  when: manual
+  only:
+    - master
