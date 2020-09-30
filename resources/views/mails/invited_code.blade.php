@@ -171,7 +171,7 @@
                                                             </td>--}}
 
                                                             <td class="store"> <a  href="{{url('app-download/android beta')}}" target="_blank">
-                                                                    <img src="{{url('images/apple_store_download.png')}}" alt="">
+                                                                    <img src="{{url('images/google_store_download.png')}}" alt="">
                                                                 </a>
                                                             </td>
                                                             <td></td>
