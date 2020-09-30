@@ -165,15 +165,20 @@
                                                     <table border="0" cellpadding="0" cellspacing="0">
                                                         <tbody>
                                                         <tr>
-                                                            <td class="store"> <a  href="{{config('app.app_apple_store_download_link')}}" target="_blank">
+                                                          {{--  <td class="store"> <a  href="{{config('app.app_apple_store_download_link')}}" target="_blank">
+                                                                    <img src="{{url('images/apple_store_download.png')}}" alt="">
+                                                                </a>
+                                                            </td>--}}
+
+                                                            <td class="store"> <a  href="{{url('app-download/android beta')}}" target="_blank">
                                                                     <img src="{{url('images/apple_store_download.png')}}" alt="">
                                                                 </a>
                                                             </td>
                                                             <td></td>
-                                                            <td class="store"> <a   href="{{config('app.app_google_store_download_link')}}" target="_blank">
+                                                          {{--  <td class="store"> <a   href="{{config('app.app_google_store_download_link')}}" target="_blank">
                                                                     <img src="{{url('images/google_store_download.png')}}" alt="">
                                                                 </a>
-                                                            </td>
+                                                            </td>--}}
                                                         </tr>
                                                         </tbody>
                                                     </table>
