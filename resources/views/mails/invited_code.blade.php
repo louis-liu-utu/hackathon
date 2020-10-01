@@ -62,10 +62,40 @@
             padding: 30px;
         }
 
+        .download-wrap {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .download-icon {
+            width: 40px;
+            height: 40px;
+            vertical-align:middle;
+        }
+        .download-text {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 40px;
+            height: 40px;
+            border: 1px solid #707070;
+            transition: all .5s;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            vertical-align:bottom;
+            padding: 8px 10px;
+        }
+        .download-text:hover {
+            border: 1px solid #2185d0;
+            color: #fff;
+            background-color: #2185d0;
+        }
+
         @media only screen and (max-width: 620px) {
             .main .store {
                 padding: 10px;
             }
+
         }
         .wrapper {
             box-sizing: border-box;
@@ -110,6 +140,19 @@
                 font-size: 16px;
                 margin-bottom: 0;
             }
+            .download-icon {
+                width: 20px;
+                height: 20px;
+            }
+            .download-wrap .download-text {
+                line-height: 20px;
+                height: 20px;
+                font-size: 12px !important;
+            }
+            .footer {
+                margin-right: 15px;
+                margin-left: 15px;
+            }
         }
         @media all {
             .ExternalClass {
@@ -129,6 +172,7 @@
                 line-height: inherit !important;
                 text-decoration: none !important; }
            }
+
     </style>
 @endsection
 
@@ -170,16 +214,33 @@
                                                                 </a>
                                                             </td>--}}
 
-                                                            <td class="store"> <a  href="{{url('app-download/android beta')}}" target="_blank">
+                                                         {{--   <td class="store"> <a  href="{{url('app-download/android beta')}}" target="_blank">
                                                                     <img src="{{url('images/google_store_download.png')}}" alt="">
                                                                 </a>
                                                             </td>
-                                                            <td></td>
+                                                            <td></td>--}}
                                                           {{--  <td class="store"> <a   href="{{config('app.app_google_store_download_link')}}" target="_blank">
                                                                     <img src="{{url('images/google_store_download.png')}}" alt="">
                                                                 </a>
                                                             </td>--}}
-                                                        </tr>
+                                                            @if(\App\Helpers\AppSoftware::has('android beta'))
+                                                            <td>
+                                                                <div class="download-wrap">
+                                                                    <img class="download-icon" src="{{url('images/android_download.png')}}" alt="">
+                                                                    <a class="download-text" href="{{url('app-download/android beta')}}">Android Download</a>
+                                                                </div>
+                                                            </td>
+                                                            @endif
+
+                                                            @if(\App\Helpers\AppSoftware::has('apple beta'))
+                                                            <td>
+                                                                <div class="download-wrap">
+                                                                    <img class="download-icon" src="{{url('images/apple_download.png')}}" alt="">
+                                                                    <a class="download-text" href="{{url('app-download/apple beta')}}">Apple Download</a>
+                                                                </div>
+                                                            </td>
+                                                            @endif
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </td>
