@@ -31,7 +31,7 @@ class AdminController extends Controller
        $customers = Customer::lastYear()->countByDate()->get();
 
         $labels = $customers->map(function ($customer) {
-            return date( 'm/d',strtotime($customer->date));
+            return date( 'd',strtotime($customer->date));
         })->toJson();
 
         $seriesC = $customers->map(function ($customer) {
@@ -44,7 +44,7 @@ class AdminController extends Controller
 
         $appDownloads = AppDownload::lastYear()->countByDate()->get();
         $downloadLabels = $appDownloads->map(function ($appDownload) {
-            return date( 'm/d',strtotime($appDownload->date));
+            return date( 'd',strtotime($appDownload->date));
         })->toJson();
 
         $downloadS = $appDownloads->map(function ($appDownload) {
@@ -66,7 +66,7 @@ class AdminController extends Controller
         $analyticsSerieBiggest = 0;
         foreach ($analyticsData as $analyticsRow) {
             if($analyticsRow['pageViews'] || $analyticsRow['visitors']) {
-                $analyticsLabels[] = $analyticsRow['date']->format('m/d');
+                $analyticsLabels[] = $analyticsRow['date']->format('d');
                 $analyticsSeriesPageViews[] = $analyticsRow['pageViews'];
                 $analyticsSeriesvisitors[] = $analyticsRow['visitors'];
                 if($analyticsRow['visitors'] < $analyticsSerieSmallest) $analyticsSerieSmallest = $analyticsRow['visitors'];

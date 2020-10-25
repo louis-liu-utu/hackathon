@@ -18,3 +18,6 @@ build-pipline.pem
 Invited_code_api_doc.docx
 /storage/analytics/utu-traffic-85d5429dea3f.json
 /storage
+utu_dev.pem
+jenkins-server.pem
+.DS_Store
