@@ -28,12 +28,16 @@ php artisan key:generate
 
 php artisan migrate
 
- php artisan db:seed
+php artisan db:seed
 
 valet link( generate a domain end with .test, like utu-website.test )
 
+mkdir storage/framework/sessions
+mkdir storage/framework/cache
 
 
 npm run watch              
 
 npm run prod
+
+php artisan storage:link

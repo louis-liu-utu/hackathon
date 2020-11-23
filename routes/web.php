@@ -48,7 +48,8 @@ Route::get('/contact-us', function () {
     return view('contact_us');
 });
 
-Route::post('/contact-us','ContactController@store');
+
+Route::post('/contact-us','ContactController@store')->middleware('cors');
 
 Route::get('/contact-us-message',function () {
     return view('contact_us_message');
