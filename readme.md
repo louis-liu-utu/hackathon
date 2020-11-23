@@ -32,12 +32,11 @@ php artisan db:seed
 
 valet link( generate a domain end with .test, like utu-website.test )
 
-mkdir storage/framework/sessions
-mkdir storage/framework/cache
-
 
 npm run watch              
 
 npm run prod
 
 php artisan storage:link
+php artisan cache:clear
+php artisan config:clear
