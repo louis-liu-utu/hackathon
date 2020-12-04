@@ -5,6 +5,7 @@ namespace App\Http\Services;
 
 
 
+use App\AppUser;
 use App\Customer;
 use App\InvitedCode;
 use App\Mail\SendInvitedCode;
@@ -20,11 +21,6 @@ class InvitedCodeService
         if($existedInvitedCode) return $existedInvitedCode;
 
         $randStr = $this->generateRandom12NumberAndLetter();
-        //make sure new rand str not exited
-        while($existedCode = InvitedCode::where('code', $randStr)->first()) {
-           $randStr = $this->generateRandom12NumberAndLetter();
-            $existedCode = InvitedCode::where('code', $randStr)->first();
-        }
         return InvitedCode::create([
             'code' => $randStr,
             'customer_id' => $customId,
@@ -51,8 +47,15 @@ class InvitedCodeService
         $seeds = ['0','1','2','3','4','5','6','7','8','9',
             'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
             'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-        return implode('',Arr::random(Arr::shuffle($seeds),12));
+        $randomStr = implode('',Arr::random(Arr::shuffle($seeds),12));
+
+        //check invited existed
+        while($existedCode = InvitedCode::where('code', $randomStr)->first()) {
+            $randomStr = $this->generateRandom12NumberAndLetter();
+        }
+        return $randomStr;
     }
+
 
     public function checkAndSetIfCodeExpired($code) {
         $invitedCode = InvitedCode::where('code', $code)->first();
@@ -75,25 +78,19 @@ class InvitedCodeService
     }
 
     public function apiGenerateInvitedCodeAndSendEmail($request) {
-        $customer = Customer::create([
-            'email' => $request->email,
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-        ]);
+        $appUser = AppUser::firstOrNew(['email' => $request->email]);
+        $appUser->nick_name = $request->fullname;
+        $appUser->app_user_id = $request->name;
+        $appUser->save();
 
         $randStr = $this->generateRandom12NumberAndLetter();
-        //make sure new rand str not exited
-        while($existedCode = InvitedCode::where('code', $randStr)->first()) {
-            $randStr = $this->generateRandom12NumberAndLetter();
-            $existedCode = InvitedCode::where('code', $randStr)->first();
-        }
         $invitedCode = InvitedCode::firstOrNew([ 'code' => $randStr]);
-        $invitedCode->customer_id = $customer->id;
+        $invitedCode->customer_id = 0;
         $invitedCode->status = InvitedCode::STATUS_CREATE;
         $invitedCode->save();
 
         try {
-            Mail::to($customer->email)->send(new SendInvitedCode($invitedCode));
+            Mail::to($appUser->email)->send(new SendInvitedCode($invitedCode));
         } catch (\Exception $e) {
             throw $e;
         }
@@ -102,6 +99,9 @@ class InvitedCodeService
         $invitedCode->sent_at = now();
         $invitedCode->expired_by = Carbon::now()->addDays(config('app.request_access_invited_code_expired_dates'));
         $invitedCode->save();
+
+        $appUser->invited_num = $appUser->invited_num + 1;
+        $appUser->save();
 
         return $invitedCode;
     }

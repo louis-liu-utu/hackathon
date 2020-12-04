@@ -58,7 +58,7 @@ class AdminController extends Controller
 
 
 
-        $analyticsData = Analytics::fetchTotalVisitorsAndPageViews(Period::create(Carbon::now()->subDays(365),now()));
+        $analyticsData = Analytics::fetchTotalVisitorsAndPageViews(Period::create(Carbon::now()->subDays(60),now()));
         $analyticsLabels = [];
         $analyticsSeriesPageViews = [];
         $analyticsSeriesvisitors= [];

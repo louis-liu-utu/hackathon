@@ -55,7 +55,7 @@
 
             optionsDailySalesChart = {
                 lineSmooth: Chartist.Interpolation.cardinal({
-                    tension: 0
+                    tension: 1
                 }),
                 low: {{$serieSmallest}},
                 high: {{$serieBiggest}}, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
@@ -65,6 +65,7 @@
                     bottom: 0,
                     left: 0
                 },
+                stretch: true
             }
 
             var dailySalesChart = new Chartist.Line('#dailySalesChart1', dataDailySalesChart, optionsDailySalesChart);

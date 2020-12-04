@@ -21,3 +21,4 @@ Invited_code_api_doc.docx
 utu_dev.pem
 jenkins-server.pem
 .DS_Store
+/storage/framework/sessions/*
