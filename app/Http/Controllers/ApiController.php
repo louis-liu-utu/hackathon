@@ -87,7 +87,7 @@ class ApiController extends Controller
     /**
      * api/generate_invited_code
      * post
-     * username=**,password=**,email=**,first_name=**,last_name=**
+     * username=**,password=**,email=**,fullname=**,name=**
      */
     public function generateInvitedCode(Request $request) {
         $result = $this->validateAuth($request);
@@ -104,7 +104,7 @@ class ApiController extends Controller
             return response()->json([
                 'code' => self::STATUS_OK,
                 'message' => 'generate code and send email successfully',
-                'data' => $invitedCode->code
+                'data' => $invitedCode
             ]);
         } catch (\Exception $e) {
             return response()->json([
@@ -170,14 +170,14 @@ class ApiController extends Controller
         $validator = Validator::make($request->all(),
             [
                 'email' => 'required|email',
-                'first_name' => 'required',
-                'last_name' => 'required'
+                'fullname' => 'required',
+                'name' => 'required'
             ],
             [
-                'first_name.required' => 'first name is required',
-                'last_name.required' => 'last name is required',
+                'fullname.required' => 'first name is required',
                 'email.required' => 'email is required',
-                'email.email' => 'email format is invalid'
+                'email.email' => 'email format is invalid',
+                'name.required' => 'user id/name is required',
             ]);
 
         if($validator->fails()) {

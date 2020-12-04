@@ -6,8 +6,8 @@ namespace App\Http\Services;
 
 
 use App\AppUser;
-use App\Customer;
 use App\InvitedCode;
+use App\Mail\AppInvitedCode;
 use App\Mail\SendInvitedCode;
 use Carbon\Carbon;
 use Illuminate\Support\Arr;
@@ -90,7 +90,7 @@ class InvitedCodeService
         $invitedCode->save();
 
         try {
-            Mail::to($appUser->email)->send(new SendInvitedCode($invitedCode));
+            Mail::to($appUser->email)->send(new AppInvitedCode(['code' => $randStr,'name'=>$appUser->nick_name]));
         } catch (\Exception $e) {
             throw $e;
         }
@@ -103,6 +103,6 @@ class InvitedCodeService
         $appUser->invited_num = $appUser->invited_num + 1;
         $appUser->save();
 
-        return $invitedCode;
+        return ['code' => $randStr, 'invited_num' => $appUser->invited_num];
     }
 }
