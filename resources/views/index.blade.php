@@ -44,7 +44,7 @@
                          <div class="home1-icons-img">
                              <img src="{{url('images/android_download.png')}}" alt="utu App Android Download">
                          </div>
-                         @if(\App\Helpers\AppSoftware::has('android beta'))
+                        {{-- @if(\App\Helpers\AppSoftware::has('android beta'))
                          <a  href="{{url('app-download/android beta')}}" class="home1-icons-txt">
                              Android Download
                          </a>
@@ -52,14 +52,17 @@
                              <a class="home1-icons-txt disable">
                                  Android Download
                              </a>
-                         @endif
+                         @endif --}}
+                           <a class="home1-icons-txt disable">
+                                                          Android Download
+                                                      </a>
                      </div>
 
                      <div class="home1-icons-item">
                          <div class="home1-icons-img">
                              <img src="{{url('images/apple_download.png')}}" alt="utu App Apple Download">
                          </div>
-                         @if(\App\Helpers\AppSoftware::has('apple beta'))
+                        {{--  @if(\App\Helpers\AppSoftware::has('apple beta'))
                              <a href="{{url('app-download/apple beta')}}"  class="home1-icons-txt">
                                  TestFlight Download
                              </a>
@@ -67,7 +70,10 @@
                              <a class="home1-icons-txt disable">
                                  TestFlight Download
                              </a>
-                         @endif
+                         @endif --}}
+                           <a class="home1-icons-txt disable">
+                                                          TestFlight Download
+                                                      </a>
                      </div>
                  </div>
              </div>
