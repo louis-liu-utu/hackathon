@@ -11,6 +11,8 @@ use Spatie\Analytics\Period;
 
 class AdminController extends Controller
 {
+     const INDEX_SLOT = 5;
+
     /**
      * Create a new controller instance.
      *
@@ -28,13 +30,22 @@ class AdminController extends Controller
      */
     public function index()
     {
+       $index = 1;
+
        $customers = Customer::lastYear()->countByDate()->get();
 
-        $labels = $customers->map(function ($customer) {
-            return date( 'd',strtotime($customer->date));
+        $labels = $customers->map(function ($customer) use (&$index) {
+            if($index === self:: INDEX_SLOT) {
+                $index = 1;
+                return date( 'd',strtotime($customer->date));
+            } else {
+                $index++;
+                return "";
+            }
+
         })->toJson();
 
-        $seriesC = $customers->map(function ($customer) {
+        $seriesC = $customers->map(function ($customer)  {
             return $customer->count;
         });
         $series = $seriesC->toJson();
@@ -43,8 +54,14 @@ class AdminController extends Controller
         $serieBiggest = round($seriesSorted->last() * 1.2);
 
         $appDownloads = AppDownload::lastYear()->countByDate()->get();
-        $downloadLabels = $appDownloads->map(function ($appDownload) {
-            return date( 'd',strtotime($appDownload->date));
+        $downloadLabels = $appDownloads->map(function ($appDownload) use(&$index) {
+            if($index === self:: INDEX_SLOT) {
+              $index = 1;
+              return date( 'd',strtotime($appDownload->date));
+            } else {
+              $index++;
+              return "";
+            }
         })->toJson();
 
         $downloadS = $appDownloads->map(function ($appDownload) {
@@ -58,15 +75,23 @@ class AdminController extends Controller
 
 
 
-        $analyticsData = Analytics::fetchTotalVisitorsAndPageViews(Period::create(Carbon::now()->subDays(60),now()));
+        $analyticsData = Analytics::fetchTotalVisitorsAndPageViews(Period::create(Carbon::now()->subDays(365),now()));
         $analyticsLabels = [];
         $analyticsSeriesPageViews = [];
         $analyticsSeriesvisitors= [];
         $analyticsSerieSmallest = 100000000;
         $analyticsSerieBiggest = 0;
+
         foreach ($analyticsData as $analyticsRow) {
             if($analyticsRow['pageViews'] || $analyticsRow['visitors']) {
-                $analyticsLabels[] = $analyticsRow['date']->format('d');
+                if($index === self::INDEX_SLOT) {
+                    $analyticsLabels[] = $analyticsRow['date']->format('d');
+                    $index = 1;
+                } else {
+                     $analyticsLabels[] = "";
+                     $index++;
+                }
+
                 $analyticsSeriesPageViews[] = $analyticsRow['pageViews'];
                 $analyticsSeriesvisitors[] = $analyticsRow['visitors'];
                 if($analyticsRow['visitors'] < $analyticsSerieSmallest) $analyticsSerieSmallest = $analyticsRow['visitors'];
