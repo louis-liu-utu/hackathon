@@ -106,8 +106,8 @@
                 <ul>
                     <li>360 bio verification, one account per person</li>
                     <li>no bot or fake account. Decentralised Identity</li>
-                    <li>provide security, transparency and trust that</li>
-                    <li>weren’t possible before.</li>
+                    <li>provides security, transparency and trust that</li>
+                    <li>was not possible before.</li>
                 </ul>
             </div>
 
@@ -124,9 +124,9 @@
 
             <span class="br"> EOSIO open source blockchain infrastructure and
             </span>
-            smart contract provide transparency and trust.
+            smart contracts provide transparency and trust.
             <br>
-            No shady algorithm and misleading information.
+            No shady algorithms and misleading information.
             <br>
             No profit driven manipulation news feed.
             <br>

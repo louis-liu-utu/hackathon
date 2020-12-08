@@ -89,7 +89,7 @@ class ApiController extends Controller
      * post
      * username=**,password=**,email=**,fullname=**,name=**
      */
-    public function generateInvitedCode(Request $request) {
+    public function generateInvitedCodeByUser(Request $request) {
         $result = $this->validateAuth($request);
         if($result['code'] !== self::STATUS_OK) {
             return response()->json($result);
@@ -113,6 +113,34 @@ class ApiController extends Controller
                 'data' => ''
             ]);
         }
+    }
+
+    public function getInvitedCodeStatusByUser(Request $request) {
+        $result = $this->validateAuth($request);
+        if($result['code'] !== self::STATUS_OK) {
+            return response()->json($result);
+        }
+
+        $result = $this->validateUserInfo($request);
+        if($result['code'] !== self::STATUS_OK) {
+            return response()->json($result);
+        }
+
+        try {
+            $invitedCode = $this->invitedCodeService->getInvitedCodeStatusByUser($request);
+            return response()->json([
+                'code' => self::STATUS_OK,
+                'message' => '',
+                'data' => $invitedCode
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'code' => self::STATUS_ERR,
+                'message' => $e->getMessage(),
+                'data' => ''
+            ]);
+        }
+
     }
 
     private function validateInvitedCode($request) {
@@ -179,6 +207,31 @@ class ApiController extends Controller
                 'email.email' => 'email format is invalid',
                 'name.required' => 'user id/name is required',
             ]);
+
+        if($validator->fails()) {
+            return [
+                'code' => self::STATUS_ERR,
+                'message' => $validator->errors()->first(),
+                'data' => ''
+            ];
+        }
+
+        return [
+            'code' => self::STATUS_OK,
+            'message' => '',
+            'data' => ''
+        ];
+    }
+
+    private function validateUserInfo($request) {
+        $validator = Validator::make($request->all(),
+            [
+                'name' => 'required'
+            ],
+            [
+                'name.required' => 'user id/name is required',
+            ]
+        );
 
         if($validator->fails()) {
             return [

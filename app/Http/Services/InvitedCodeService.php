@@ -50,9 +50,9 @@ class InvitedCodeService
         $randomStr = implode('',Arr::random(Arr::shuffle($seeds),12));
 
         //check invited existed
-        while($existedCode = InvitedCode::where('code', $randomStr)->first()) {
+        /*while($existedCode = InvitedCode::where('code', $randomStr)->first()) {
             $randomStr = $this->generateRandom12NumberAndLetter();
-        }
+        }*/
         return $randomStr;
     }
 
@@ -86,6 +86,7 @@ class InvitedCodeService
         $randStr = $this->generateRandom12NumberAndLetter();
         $invitedCode = InvitedCode::firstOrNew([ 'code' => $randStr]);
         $invitedCode->customer_id = 0;
+        $invitedCode->app_user_id = $request->name;
         $invitedCode->status = InvitedCode::STATUS_CREATE;
         $invitedCode->save();
 
@@ -94,15 +95,22 @@ class InvitedCodeService
         } catch (\Exception $e) {
             throw $e;
         }
-
         $invitedCode->status = InvitedCode::STATUS_SENT;
         $invitedCode->sent_at = now();
         $invitedCode->expired_by = Carbon::now()->addDays(config('app.request_access_invited_code_expired_dates'));
         $invitedCode->save();
 
         $appUser->invited_num = $appUser->invited_num + 1;
+        if($appUser->invited_times <= 5) $appUser->invited_times = $appUser->invited_times + 1;
+        else {
+            $appUser->invited_times = 1;
+        }
         $appUser->save();
 
-        return ['code' => $randStr, 'invited_num' => $appUser->invited_num];
+        return ['code' => $randStr, 'invited_times' => $appUser->invited_times];
+    }
+
+    public function getInvitedCodeStatusByUser($request) {
+
     }
 }
