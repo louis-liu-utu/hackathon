@@ -104,7 +104,7 @@
             </div>
             <div class="home3-txt">
                 <ul>
-                    <li>360 bio verification, one account per person</li>
+                    <li>360 bio verification, one account per person,</li>
                     <li>no bots or fake accounts. Decentralised Identity</li>
                     <li>provides security, transparency and trust that</li>
                     <li>was not possible before.</li>
