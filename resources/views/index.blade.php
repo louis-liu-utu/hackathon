@@ -105,7 +105,7 @@
             <div class="home3-txt">
                 <ul>
                     <li>360 bio verification, one account per person</li>
-                    <li>no bot or fake account. Decentralised Identity</li>
+                    <li>no bots or fake accounts. Decentralised Identity</li>
                     <li>provides security, transparency and trust that</li>
                     <li>was not possible before.</li>
                 </ul>
@@ -128,7 +128,7 @@
             <br>
             No shady algorithms and misleading information.
             <br>
-            No profit driven manipulation news feed.
+            No manipulating news feeds driven by profit.
             <br>
             UTU gives control back to users and community.
         </p>
@@ -195,15 +195,15 @@
     <div class="home5-bg-black">
         <div class="container">
             <div class="home5-list">
-                <h3 class="home5-title">Share post in your</h3>
+                <h3 class="home5-title">Share posts in your</h3>
                 <h3 class="home5-title">private group</h3>
 
                 <div class="home5-txt">
                     <ul>
                         <li>Traditional social platforms sell users attention</li>
-                        <li>UTU rewards members action</li>
+                        <li>UTU rewards members' actions</li>
                         <li>Complete community tasks</li>
-                        <li>and get reward tokens by</li>
+                        <li>and get rewarded tokens by</li>
                         <li class="icons-list">
                             <i class="iconfont icon-Share-Outline"></i> <i class="iconfont icon-like"></i> <i class="iconfont icon-comment"></i>
                         </li>
@@ -252,7 +252,7 @@
             Further
         </h1>
         <h3 class="home7-txt">
-            Create Decentralised Autonomous Community and token
+            Create Decentralised Autonomous Community and tokens
         </h3>
         <div class="row">
             <div class="col-sm-5">
@@ -334,9 +334,9 @@
             </div>
 
             <p class="home9-txt">
-                Next Gen AMM system leveraging the world
+                Next Gen AMM system leveraging the world's
                 most powerful blockchain - EOSIO
-                provide easy&smooth experience for mass
+                provide easy & smooth experience for mass
                 adoption
             </p>
         </div>
