@@ -18,8 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group([], function ($router) {
-    Route::post('/check_invited_code','ApiController@checkInvitedCode');
-    Route::post('/set_invited_code_used','ApiController@setInvitedCodeUsed');
-    Route::post('/generate_invited_code','ApiController@generateInvitedCodeByUser');
-    Route::post('/get_invited_code_status','ApiController@getInvitedCodeStatusByUser');
+    Route::get('/get_start','ApiController@get_start');
 });

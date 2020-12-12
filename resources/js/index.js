@@ -2,7 +2,6 @@ import "./common"
 
 const supportsVideo = !!document.createElement('video').canPlayType;
 if (supportsVideo) {
-
     let homeVideo = document.getElementById('video');
     const iconPlayer = document.getElementById('icon-Player');
     let home0 = document.querySelector('.home0');
@@ -17,10 +16,6 @@ if (supportsVideo) {
         homeVideo.style.height = (home1.offsetHeight - 5) + "px";
         headerDisplay = "block"
     }
-
-
-
-
     iconPlayer.addEventListener('click', function (e) {
         home1.style.display = "none";
         header.style.display = headerDisplay;
@@ -29,19 +24,16 @@ if (supportsVideo) {
         if (homeVideo.paused || homeVideo.ended) homeVideo.play();
         else homeVideo.pause();
     });
-
     homeVideo.onended = function() {
         home1.style.display = "block";
         header.style.display = "block";
         home0.style.display = "none";
     };
-
     homeVideo.addEventListener("ended", function (e) {
         home1.style.display = "block";
         header.style.display = "block";
         home0.style.display = "none";
     });
-
     homeVideo.addEventListener("paused", function (e) {
         home1.style.display = "block";
         header.style.display = "block";
