@@ -16,4 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.sass('resources/sass/roadmap.sass', 'public/css');
 
+mix.js('resources/js/index.js', 'public/js')
+    .sass('resources/sass/index.sass', 'public/css');
+
 mix.version();

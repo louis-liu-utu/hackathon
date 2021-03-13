@@ -1,0 +1,34 @@
+@import "reset"
+@import "~bootstrap-4-grid"
+@import 'variables'
+@import "mixin"
+@import "layout"
+=fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 576px, $upper-range: 1920px)
+    font-size: calc(#{$min-font-size} + #{$max-font-size / ($max-font-size * 0 + 1) - $min-font-size / ($min-font-size * 0 + 1)} * ( (100vw - #{$lower-range}) / #{$upper-range / ($upper-range * 0 + 1) - $lower-range / ($lower-range * 0 + 1)}))
+
+    @media screen and (max-width: $lower-range)
+        font-size: $min-font-size
+
+    @media screen and (min-width: $upper-range)
+        font-size: $max-font-size
+
+$rfs-base-value: 14
+$rfs-unit: px
+$rfs-breakpoint: 1920
+@import "~rfs/sass"
+
+img
+    width: 100%
+
+.home1
+    .home1-title
+        font-weight: bold
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.09
+        letter-spacing: 5.97px
+        @include fluid-type(120px, 597px)
+        @media (max-width: 350px)
+            font-size: 100px
+
+

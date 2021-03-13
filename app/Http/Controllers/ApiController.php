@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 
 class ApiController extends Controller
 {
-    const STATUS_OK = 200;
+    const STATUS_OK = 0;
     const STATUS_ERR = 400;
     const STATUS_AUTH_ERR = 401;
 
